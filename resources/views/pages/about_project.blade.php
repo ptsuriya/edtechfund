@@ -131,7 +131,10 @@
     <section id="solution" class="about section">
         <div class="container section-title" data-aos="fade-up">
             <h2>แนวทางการแก้ไขปัญหา</h2>
-            <p><span>แนวทาง</span> <span class="description-title">การพัฒนาและขับเคลื่อนโครงการ</span></p>
+            <p>
+                <span>แนวทาง</span>
+                <span class="description-title">การพัฒนาและขับเคลื่อนโครงการ</span>
+            </p>
         </div>
 
         <div class="container">
@@ -143,36 +146,46 @@
                         <p>
                             ในยุคที่ภาครัฐกำลังขับเคลื่อนสู่การเป็น <strong>รัฐบาลดิจิทัล (Digital Government)</strong>
                             และสถานศึกษาต้องปรับตัวเข้าสู่ระบบการบริหารจัดการที่ทันสมัย การใช้เทคโนโลยี <strong>Generative
-                                AI</strong> กลายเป็นเครื่องมือสำคัญในการเพิ่มประสิทธิภาพการทำงาน ลดภาระงานซ้ำซ้อน
-                            และสนับสนุน <strong>Data-Driven Decision Making</strong>
+                                AI</strong>
+                            กลายเป็นเครื่องมือสำคัญในการเพิ่มประสิทธิภาพการทำงาน ลดภาระงานซ้ำซ้อน และสนับสนุน
+                            <strong>Data-Driven Decision Making</strong>
                         </p>
 
                         <p>
                             อย่างไรก็ตาม หากไม่มีแนวทางการใช้งานที่ชัดเจน
-                            อาจก่อให้เกิดความเสี่ยงด้านความมั่นคงปลอดภัยของข้อมูล และกระทบต่อความน่าเชื่อถือขององค์กร
+                            อาจก่อให้เกิดความเสี่ยงด้านความมั่นคงปลอดภัยของข้อมูล
+                            และกระทบต่อความน่าเชื่อถือขององค์กร
                         </p>
 
                         <h5 class="fw-semibold text-dark mt-4 mb-3">แนวทางการแก้ไข:</h5>
                         <ul class="list-unstyled ps-2">
-                            <li class="mb-2">
-                                <i class="bi bi-shield-lock-fill text-success me-2"></i>
-                                <strong>พัฒนาแพลตฟอร์มบริหารจัดการ Generative AI</strong> ที่สามารถควบคุมการเข้าถึง
-                                การใช้โทเคน และตรวจสอบการใช้งานได้อย่างเป็นระบบ
+                            <li class="mb-3 d-flex">
+                                <i class="bi bi-shield-lock-fill text-success me-3 fs-4"></i>
+                                <p class="mb-0">
+                                    <strong>พัฒนาแพลตฟอร์มบริหารจัดการ Generative AI</strong>
+                                    ที่สามารถควบคุมการเข้าถึง การใช้โทเคน และตรวจสอบการใช้งานได้อย่างเป็นระบบ
+                                </p>
                             </li>
-                            <li class="mb-2">
-                                <i class="bi bi-person-check-fill text-success me-2"></i>
-                                <strong>เสริมสร้างสมรรถนะบุคลากร</strong> ให้มีทักษะในการใช้ AI อย่างปลอดภัย มีจริยธรรม
-                                และเกิดประสิทธิภาพสูงสุด
+                            <li class="mb-3 d-flex">
+                                <i class="bi bi-person-check-fill text-success me-3 fs-4"></i>
+                                <p class="mb-0">
+                                    <strong>เสริมสร้างสมรรถนะบุคลากร</strong>
+                                    ให้มีทักษะในการใช้ AI อย่างปลอดภัย มีจริยธรรม และเกิดประสิทธิภาพสูงสุด
+                                </p>
                             </li>
-                            <li class="mb-2">
-                                <i class="bi bi-boxes text-success me-2"></i>
-                                <strong>ดำเนินโครงการในลักษณะ “ต้นแบบ” (Pilot)</strong>
-                                เพื่อเป็นแนวทางแก่สถานศึกษาและหน่วยงานภาครัฐในอนาคต
+                            <li class="mb-3 d-flex">
+                                <i class="bi bi-boxes text-success me-3 fs-4"></i>
+                                <p class="mb-0">
+                                    <strong>ดำเนินโครงการในลักษณะ “ต้นแบบ” (Pilot)</strong>
+                                    เพื่อเป็นแนวทางแก่สถานศึกษาและหน่วยงานภาครัฐในอนาคต
+                                </p>
                             </li>
-                            <li>
-                                <i class="bi bi-diagram-3-fill text-success me-2"></i>
-                                อ้างอิงตาม <strong>ยุทธศาสตร์ปัญญาประดิษฐ์แห่งชาติ</strong> และ
-                                <strong>นโยบายรัฐบาลดิจิทัล</strong> ของประเทศไทย
+                            <li class="d-flex">
+                                <i class="bi bi-diagram-3-fill text-success me-3 fs-4"></i>
+                                <p class="mb-0">
+                                    อ้างอิงตาม <strong>ยุทธศาสตร์ปัญญาประดิษฐ์แห่งชาติ</strong> และ
+                                    <strong>นโยบายรัฐบาลดิจิทัล</strong> ของประเทศไทย
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -180,7 +193,7 @@
 
                 <!-- Optional Image -->
                 <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('img\aai2.png') }}" alt="AI Governance" class="img-fluid rounded shadow">
+                    <img src="{{ asset('img/aai2.png') }}" alt="AI Governance" class="img-fluid rounded shadow">
                 </div>
 
             </div>
@@ -217,8 +230,8 @@
                             <tr>
                                 <th style="width: 5%;">#</th>
                                 <th style="width: 30%;">ตัวชี้วัด</th>
-                                <th>คำอธิบายผลลัพธ์ที่คาดว่าจะเกิดขึ้น</th>
-                                <th style="width: 20%;">ค่าที่ตั้งเป้า (Target)</th>
+                                <th><p>คำอธิบายผลลัพธ์ที่คาดว่าจะเกิดขึ้น</p></th>
+                                <th style="width: 20%;"><p>ค่าที่ตั้งเป้า (Target)</p></th>
                             </tr>
                         </thead>
                         <tbody>
