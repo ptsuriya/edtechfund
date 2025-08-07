@@ -20,23 +20,27 @@
                         <div class="member-img">
                             <img src="{{ asset($reserchers['main']['image_url']) }}" class="img-fluid"
                                 alt="{{ $reserchers['main']['name'] }}">
-                            <div class="social">
+                            {{-- <div class="social">
                                 <a href="{{ $reserchers['main']['social']['twitter'] }}"><i class="bi bi-twitter-x"></i></a>
                                 <a href="{{ $reserchers['main']['social']['facebook'] }}"><i class="bi bi-facebook"></i></a>
                                 <a href="{{ $reserchers['main']['social']['instagram'] }}"><i
                                         class="bi bi-instagram"></i></a>
                                 <a href="{{ $reserchers['main']['social']['linkedin'] }}"><i class="bi bi-linkedin"></i></a>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="member-info">
                             <h4>{{ $reserchers['main']['name'] }}</h4>
                             <span>{{ $reserchers['main']['position'] }}</span>
+                            <h6 style="color: #666">{{ $reserchers['main']['duty'] }}</h6>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><hr>
 
-        </hr>
+            <div class="container section-title" data-aos="fade-up">
+            <p><span>ผู้เข้าร่วมงานวิจัย</span></p>
+            {{-- <span class="description-title">Team</span> --}}
+        </div>
             {{-- Other Members --}}
             <div class="row gy-4">
                 @foreach ($reserchers['others'] as $key => $person)
@@ -45,12 +49,6 @@
                         <div class="team-member uniform">
                             <div class="member-img">
                                 <img src="{{ asset($person['image_url']) }}" class="img-fluid" alt="{{ $person['name'] }}">
-                                <div class="social">
-                                    <a href="{{ $person['social']['twitter'] }}"><i class="bi bi-twitter-x"></i></a>
-                                    <a href="{{ $person['social']['facebook'] }}"><i class="bi bi-facebook"></i></a>
-                                    <a href="{{ $person['social']['instagram'] }}"><i class="bi bi-instagram"></i></a>
-                                    <a href="{{ $person['social']['linkedin'] }}"><i class="bi bi-linkedin"></i></a>
-                                </div>
                             </div>
                             <div class="member-info">
                                 <h4>{{ $person['name'] }}</h4>
