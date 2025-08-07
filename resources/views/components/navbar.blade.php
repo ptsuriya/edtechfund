@@ -27,7 +27,7 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="{{ route('about.reserchers') }}">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             {{-- <li><a href="#team">Team</a></li> --}}
@@ -43,7 +43,7 @@
                     <li><a href="#">Deep Dropdown 5</a></li>
                   </ul>
                 </li> --}}
-                <li><a href="#">เกี่ยวกับผู้วิจัย</a></li>
+                <li><a href="{{ route('about.reserchers') }}">เกี่ยวกับผู้วิจัย</a></li>
                 <li><a href="#">Dropdown 3</a></li>
                 <li><a href="#">Dropdown 4</a></li>
               </ul>
