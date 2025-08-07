@@ -54,7 +54,7 @@ class AboutController extends Controller
                 ],
                 [
                     'name' => 'ดร.ชวนพบ เอี่ยวสานุรักษ์',
-                    'position' => 'รองผู้อำนวยการสำนักวิทยบริการและสารสนเทศ',
+                    'position' => 'รองผู้อำนวยการสำนักวิทยบริการและเทคโนโลยีสารสนเทศ',
                     'image_url' => 'img/p7.png', // แก้ไข path รูปภาพตามจริง
                     'social' => ['twitter' => '#', 'facebook' => '#', 'instagram' => '#', 'linkedin' => '#']
                 ]
