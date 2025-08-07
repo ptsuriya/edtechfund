@@ -18,18 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/about/resercher', function () {
-    return view('pages.about_resercher');
-})->name('about_resercher');
-
 Route::get('/about', function () {
     return view('pages.about_project');
 })->name('about_project');
+
+Route::get('/about/document', function () {
+    return view('pages.document');
+})->name('about_document');
+
 
 
 Route::get('/faq', function () {
     return view('pages.faq');
 })->name('faq');
 
-Route::get('/about/reserchers', [AboutController::class, 'reserchers'])->name('about.reserchers');
+Route::get('/about/reserchers', [AboutController::class, 'reserchers'])->name('about_reserchers');
 

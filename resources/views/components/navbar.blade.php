@@ -1,6 +1,6 @@
   <header id="header" class="header sticky-top">
 
-    <div class="topbar d-flex align-items-center">
+    {{-- <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
@@ -13,27 +13,27 @@
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
-    </div><!-- End Top Bar -->
+    </div><!-- End Top Bar --> --}}
 
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="{{ asset('img/ai.png') }}" alt="">
+          <img  src="{{ asset('img/logo.svg') }}" alt="">
           <!-- <h1 class="sitename">BizLand</h1>-->
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
+            {{-- <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="{{ route('about.reserchers') }}">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#portfolio">Portfolio</a></li> --}}
             {{-- <li><a href="#team">Team</a></li> --}}
             <li class="dropdown"><a href="#"><span>เกี่ยวกับโครงการ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="/about">เกี่ยวกับโครงการ</a></li>
+                <li><a href="{{ route('about_project') }}">เกี่ยวกับโครงการ</a></li>
                 {{-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="#">Deep Dropdown 1</a></li>
@@ -43,12 +43,13 @@
                     <li><a href="#">Deep Dropdown 5</a></li>
                   </ul>
                 </li> --}}
-                <li><a href="{{ route('about.reserchers') }}">เกี่ยวกับผู้วิจัย</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
+                <li><a href="{{ route('about_reserchers') }}">เกี่ยวกับผู้วิจัย</a></li>
+                <li><a href="{{ route('about_document') }}">เอกสารที่เกี่ยวข้อง</a></li>
               </ul>
             </li>
+            <li><a href="#footer">ติดต่อเรา</a></li>
             <li><a href="{{ route('faq') }}">คำถามที่พบบ่อย</a></li>
+            <li><a href="{{ route('about_document') }}">คู่มือการใช้งาน</a></li>
             <li><a href="{{ route('home') }}">เข้าสู่ระบบ</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

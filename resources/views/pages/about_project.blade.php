@@ -4,6 +4,7 @@
 @section('meta_description', 'Welcome to our website.')
 
 @section('content')
+@include('components.headbanner')
     <!-- About Section -->
     <section id="about" class="about section light-background">
 

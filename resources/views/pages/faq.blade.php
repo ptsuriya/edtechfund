@@ -4,5 +4,6 @@
 @section('meta_description', 'Welcome to our website.')
 
 @section('content')
+@include('components.headbanner')
 @include('components.faq')
 @endsection

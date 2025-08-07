@@ -4,7 +4,7 @@
 @section('meta_description', 'Welcome to our website.')
 
 @section('content')
-
+@include('components.hero')
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
