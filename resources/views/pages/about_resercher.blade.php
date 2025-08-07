@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-
+        </hr>
             {{-- Other Members --}}
             <div class="row gy-4">
                 @foreach ($reserchers['others'] as $key => $person)

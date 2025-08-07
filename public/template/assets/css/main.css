@@ -29,6 +29,7 @@
     --accent-color: #106eea; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -881,9 +882,10 @@ section,
     line-height: 56px;
 }
 .hero h2 {
+    color: #333333;
     margin: 0;
     font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
-    font-weight: 700;
+    font-weight: 500;
     line-height: clamp(1.2, 4.5vw, 1.8);
 }
 
@@ -2048,7 +2050,7 @@ section,
     margin-bottom: 15px;
 
     height: 300px; /* กำหนดความสูงตามต้องการ */
-    
+
     display: flex;               /* ใช้ flexbox */
     justify-content: center;     /* จัดแนวนอนกลาง */
     align-items: center;         /* จัดแนวตั้งกลาง */

@@ -20,7 +20,7 @@
                         <form action="#" method="post" class="php-email-form">
 
                             <div class="form-group mb-3">
-                                <label for="username">ชื่อผู้ใช้ หรือ อีเมล</label>
+                                <label for="username">ชื่อผู้ใช้</label>
                                 <input type="text" class="form-control" name="username" id="username" required>
                             </div>
 
