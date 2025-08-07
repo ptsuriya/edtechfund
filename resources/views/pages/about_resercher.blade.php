@@ -14,8 +14,8 @@
         <div class="container">
             {{-- Main Member --}}
             <div class="row justify-content-center align-items-center mb-5">
-                <div class="col-lg-6 col-md-8 d-flex justify-content-center align-items-center">
-                    <div class="team-member">
+                <div class="col-lg-8 col-md-10 d-flex justify-content-center align-items-center">
+                    <div class="team-member main-member">
                         <div class="member-img">
                             <img src="{{ asset($reserchers['main']['image_url']) }}" class="img-fluid"
                                 alt="{{ $reserchers['main']['name'] }}">
@@ -34,6 +34,7 @@
                     </div>
                 </div>
             </div>
+
 
             {{-- Other Members --}}
             <div class="row gy-4">

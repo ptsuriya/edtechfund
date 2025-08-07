@@ -33,7 +33,7 @@
             {{-- <li><a href="#team">Team</a></li> --}}
             <li class="dropdown"><a href="#"><span>เกี่ยวกับโครงการ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">เกี่ยวกับโครงการ</a></li>
+                <li><a href="/about">เกี่ยวกับโครงการ</a></li>
                 {{-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="#">Deep Dropdown 1</a></li>
