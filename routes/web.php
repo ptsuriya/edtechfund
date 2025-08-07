@@ -24,3 +24,7 @@ Route::get('/about/resercher', function () {
 Route::get('/about', function () {
     return view('pages.about_project');
 })->name('about_project');
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+})->name('faq');
