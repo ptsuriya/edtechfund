@@ -13,6 +13,7 @@ class AboutController extends Controller
             'main' => [
                 'name' => 'ผู้ช่วยศาสตราจารย์ไวกูณฑ์ ทองอร่าม',
                 'position' => 'อธิการบดี',
+                'duty' => 'ที่ปรึกษาโครงการ',
                 'image_url' => 'img/p1.png', // แก้ไข path รูปภาพตามจริง
                 'social' => [
                     'twitter' => '#',

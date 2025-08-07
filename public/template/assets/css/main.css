@@ -2120,7 +2120,7 @@ section,
         object-fit: cover;
     }
 
-    .team-member.main-member .member-info h4 {
+    .team-member.main-member .member-info h4 h5 {
         font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 10px;
