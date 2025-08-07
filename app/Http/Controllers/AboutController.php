@@ -30,7 +30,7 @@ class AboutController extends Controller
                 ],
                 [
                     'name' => 'ผู้ช่วยศาสตราจารย์ ดร.พัชรินทร์ บัวเย็น',
-                    'position' => 'N/A',
+                    'position' => 'รองผู้อำนวยการสำนักวิทยบริการและเทคโนโลยีสารสนเทศ',
                     'image_url' => 'img/p3.png', // แก้ไข path รูปภาพตามจริง
                     'social' => ['twitter' => '#', 'facebook' => '#', 'instagram' => '#', 'linkedin' => '#']
                 ],
@@ -48,13 +48,13 @@ class AboutController extends Controller
                 ],
                 [
                     'name' => 'ดร.สันดุสิทธิ์ บริวงษ์ตระกูล',
-                    'position' => 'N/A',
+                    'position' => 'รองผู้อำนวยการสำนักวิทยบริการและเทคโนโลยีสารสนเทศ',
                     'image_url' => 'img/p6.png', // แก้ไข path รูปภาพตามจริง
                     'social' => ['twitter' => '#', 'facebook' => '#', 'instagram' => '#', 'linkedin' => '#']
                 ],
                 [
                     'name' => 'ดร.ชวนพบ เอี่ยวสานุรักษ์',
-                    'position' => 'N/A',
+                    'position' => 'รองผู้อำนวยการสำนักวิทยบริการและสารสนเทศ',
                     'image_url' => 'img/p7.png', // แก้ไข path รูปภาพตามจริง
                     'social' => ['twitter' => '#', 'facebook' => '#', 'instagram' => '#', 'linkedin' => '#']
                 ]
