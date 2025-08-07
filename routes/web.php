@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/about/resercher', function () {
 Route::get('/about', function () {
     return view('pages.about_project');
 })->name('about_project');
+
+Route::get('/about/reserchers', [AboutController::class, 'reserchers'])->name('about.reserchers');
