@@ -7,7 +7,7 @@
     <section id="team" class="team section light-background">
         <div class="container section-title" data-aos="fade-up">
             <h2>Team</h2>
-            <p><span>Our Hardworking</span> <span class="description-title">Team</span></p>
+            <p><span>ที่ปรึกษาโครงการ</span> <span class="description-title">Team</span></p>
         </div>
 
         <div class="container">
