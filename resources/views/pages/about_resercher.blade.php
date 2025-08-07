@@ -7,7 +7,7 @@
 @include('components.headbanner')
     <section id="team" class="team section light-background">
         <div class="container section-title" data-aos="fade-up">
-            <h2>Team</h2>
+            <h2>เกี่ยวกับ</h2>
             <p><span>ที่ปรึกษาโครงการ</span></p>
             {{-- <span class="description-title">Team</span> --}}
         </div>

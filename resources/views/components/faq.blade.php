@@ -4,7 +4,7 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>F.A.Q</h2>
-    <p><span>Frequently Asked</span> <span class="description-title">Questions</span></p>
+    <p><span>คำถาม</span> <span class="description-title">ที่พบบ่อย</span></p>
   </div><!-- End Section Title -->
 
   <div class="container">

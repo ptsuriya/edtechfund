@@ -10,8 +10,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>About</h2>
-            <p><span>Find Out More</span> <span class="description-title">About the Project</span></p>
+            <h2>เกี่ยวกับ</h2>
+            <p><span>เกี่ยวกับ</span> <span class="description-title">โครงการ</span></p>
         </div>
         <!-- End Section Title -->
 
