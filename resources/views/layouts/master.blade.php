@@ -29,6 +29,7 @@
     @include('components.navbar')
 
      <main id="main">
+        @include('components.hero')
         @yield('content')
     </main>
      @include('components.footer')
