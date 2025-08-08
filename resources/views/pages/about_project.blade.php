@@ -87,13 +87,13 @@
 
                         <h5 class="fw-semibold text-dark mt-4">การเชื่อมโยงกับนโยบายและแผนระดับชาติ:</h5>
                         <ul class="list-unstyled">
-                            <li><i class="bi bi-check-circle text-success me-2"></i>Thailand 4.0 และ Digital Government
+                            <li><i class="bi bi-check-circle text-primary me-2"></i>Thailand 4.0 และ Digital Government
                                 Development Plan 2563–2565</li>
-                            <li><i class="bi bi-check-circle text-success me-2"></i>แผนพัฒนาดิจิทัลฯ แห่งชาติ ฉบับที่ 1
+                            <li><i class="bi bi-check-circle text-primary me-2"></i>แผนพัฒนาดิจิทัลฯ แห่งชาติ ฉบับที่ 1
                                 (2560–2564)</li>
-                            <li><i class="bi bi-check-circle text-success me-2"></i>พระราชบัญญัติการพัฒนาดิจิทัลฯ พ.ศ. 2560
+                            <li><i class="bi bi-check-circle text-primary me-2"></i>พระราชบัญญัติการพัฒนาดิจิทัลฯ พ.ศ. 2560
                             </li>
-                            <li><i class="bi bi-check-circle text-success me-2"></i>แผนการศึกษาแห่งชาติ พ.ศ. 2560–2579</li>
+                            <li><i class="bi bi-check-circle text-primary me-2"></i>แผนการศึกษาแห่งชาติ พ.ศ. 2560–2579</li>
                         </ul>
                     </div>
                 </div>
@@ -161,28 +161,28 @@
                         <h5 class="fw-semibold text-dark mt-4 mb-3">แนวทางการแก้ไข:</h5>
                         <ul class="list-unstyled ps-2">
                             <li class="mb-3 d-flex">
-                                <i class="bi bi-shield-lock-fill text-success me-3 fs-4"></i>
+                                <i class="bi bi-shield-lock-fill text-primary me-3 fs-4"></i>
                                 <p class="mb-0">
                                     <strong>พัฒนาแพลตฟอร์มบริหารจัดการ Generative AI</strong>
                                     ที่สามารถควบคุมการเข้าถึง การใช้โทเคน และตรวจสอบการใช้งานได้อย่างเป็นระบบ
                                 </p>
                             </li>
                             <li class="mb-3 d-flex">
-                                <i class="bi bi-person-check-fill text-success me-3 fs-4"></i>
+                                <i class="bi bi-person-check-fill text-primary me-3 fs-4"></i>
                                 <p class="mb-0">
                                     <strong>เสริมสร้างสมรรถนะบุคลากร</strong>
                                     ให้มีทักษะในการใช้ AI อย่างปลอดภัย มีจริยธรรม และเกิดประสิทธิภาพสูงสุด
                                 </p>
                             </li>
                             <li class="mb-3 d-flex">
-                                <i class="bi bi-boxes text-success me-3 fs-4"></i>
+                                <i class="bi bi-boxes text-primary me-3 fs-4"></i>
                                 <p class="mb-0">
                                     <strong>ดำเนินโครงการในลักษณะ “ต้นแบบ” (Pilot)</strong>
                                     เพื่อเป็นแนวทางแก่สถานศึกษาและหน่วยงานภาครัฐในอนาคต
                                 </p>
                             </li>
                             <li class="d-flex">
-                                <i class="bi bi-diagram-3-fill text-success me-3 fs-4"></i>
+                                <i class="bi bi-diagram-3-fill text-primary me-3 fs-4"></i>
                                 <p class="mb-0">
                                     อ้างอิงตาม <strong>ยุทธศาสตร์ปัญญาประดิษฐ์แห่งชาติ</strong> และ
                                     <strong>นโยบายรัฐบาลดิจิทัล</strong> ของประเทศไทย
