@@ -4,12 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title', 'BizLand Bootstrap Template')</title>
-    <meta name="description" content="@yield('meta_description', '')">
-    <meta name="keywords" content="@yield('meta_keywords', '')">
+    <!-- ชื่อเว็บ -->
+    <title>@yield('title', 'RBRU X Edtech Fund AI Gateway')</title>
+    <!-- คำอธิบายเว็บไซต์สำหรับ SEO -->
+    <meta name="description" content="@yield('meta_description', 'แพลตฟอร์ม AI Gateway สำหรับครูและบุคลากรทางการศึกษา ร่วมกับ RBRU และ EdTech Fund')">
+    <!-- คำสำคัญสำหรับ SEO -->
+    <meta name="keywords" content="@yield('meta_keywords', 'RBRU, EdTech Fund, AI, AI Gateway, Teacher, การศึกษา, เทคโนโลยีการศึกษา')">
 
-    <link href="{{ asset('template/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('template/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+
+    <link href="{{ asset('img\logo.png') }}" rel="icon">
+    <link href="{{ asset('img\logo.png') }}" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -34,7 +39,7 @@
     @include('components.navbar')
 
     <main id="main">
-        
+
         @yield('content')
     </main>
     @include('components.footer')
