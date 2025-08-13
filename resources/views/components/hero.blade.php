@@ -2,8 +2,8 @@
     <section id="hero" class="hero section light-background">
 
       <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-6 d-none d-lg-block order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+        <div class="row gy-4 quoat">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
 
             </div>
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">

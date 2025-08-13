@@ -901,6 +901,7 @@ section,
     font-weight: 400;
 }
 
+
 .hero .btn-get-started {
     color: var(--contrast-color);
     background: var(--accent-color);
@@ -948,22 +949,28 @@ section,
 .hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
-
-@media (max-width: 640px) {
-    .hero h1 {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-
+@media (max-width: 768px) {
+  .hero {
+    padding: 0;
+    background-position: 25% center;
+  }
+  .hero h2 {
+    font-size: 1.25rem ;
+  }
+  .hero p {
+    font-size: rem ;
+  }
+  .hero .container .row.quoat {
+    min-height: 75dvh;
+  }
     .hero .btn-get-started,
     .hero .btn-watch-video {
         font-size: 13px;
+    }
+    .hero .container .row.quoat {
+        display:  flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 }
 
