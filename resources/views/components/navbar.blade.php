@@ -49,7 +49,7 @@
             </li>
             <li><a href="#footer">ติดต่อเรา</a></li>
             <li><a href="{{ route('faq') }}">คำถามที่พบบ่อย</a></li>
-            <li><a href="{{ route('about_document') }}">คู่มือการใช้งาน</a></li>
+            <li><a href="{{ route('about_helpbook') }}">คู่มือการใช้งาน</a></li>
             <li><a href="/#pricing">เข้าสู่ระบบ</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

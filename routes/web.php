@@ -26,7 +26,9 @@ Route::get('/about/document', function () {
     return view('pages.document');
 })->name('about_document');
 
-
+Route::get('/helpbook', function () {
+    return view('pages.helpbook');
+})->name('about_helpbook');
 
 Route::get('/faq', function () {
     return view('pages.faq');

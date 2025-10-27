@@ -1,443 +1,401 @@
 @extends('layouts.master')
 
 @section('title', 'RBRU X Edtech Fund AI Gateway')
-@section('meta_description', 'Welcome to our website.')
+@section('meta_description', 'โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI')
 
 @section('content')
 @include('components.headbanner')
-    <!-- About Section -->
-    <section id="about" class="about section light-background">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>เกี่ยวกับ</h2>
-            <p><span>เกี่ยวกับ</span> <span class="description-title">โครงการ</span></p>
+<!-- About Section (อัปเดตถ้อยคำให้สอดคล้องเอกสาร) -->
+<section id="about" class="about section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>เกี่ยวกับ</h2>
+    <p><span>ภาพรวม</span> <span class="description-title">โครงการ</span></p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="{{ asset('img/aai.png') }}" alt="โครงการ Generative AI" class="img-fluid rounded shadow-sm">
+      </div>
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-content ps-0 ps-lg-3">
+          <h3 class="fw-bold text-primary mb-3">
+            โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI
+          </h3>
+          <p class="fst-italic text-dark">
+            เสริมสมรรถนะบุคลากร สนับสนุนรัฐบาลดิจิทัล และคุ้มครองความมั่นคงปลอดภัยของข้อมูลในสถานศึกษา
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="d-flex mb-3">
+              <i class="bi bi-diagram-3 text-primary fs-4 me-3"></i>
+              <div>
+                <h5 class="fw-semibold mb-1">แพลตฟอร์มบริหารจัดการ Generative AI</h5>
+                <p class="mb-0">ควบคุมสิทธิ์ การเข้าถึง โทเคน และตรวจสอบการใช้งานอย่างเป็นระบบ</p>
+              </div>
+            </li>
+            <li class="d-flex mb-3">
+              <i class="bi bi-shield-lock fs-4 text-primary me-3"></i>
+              <div>
+                <h5 class="fw-semibold mb-1">ความปลอดภัยและธรรมาภิบาลข้อมูล</h5>
+                <p class="mb-0">สอดคล้องมาตรฐานภาครัฐและแนวนโยบายคุ้มครองข้อมูลส่วนบุคคล</p>
+              </div>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-people fs-4 text-primary me-3"></i>
+              <div>
+                <h5 class="fw-semibold mb-1">พัฒนาและประเมินสมรรถนะบุคลากร</h5>
+                <p class="mb-0">จัดอบรมเชิงปฏิบัติการและประเมินผลหลังอบรมตามเกณฑ์</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="mt-3">
+            ดำเนินการโดย <strong>มหาวิทยาลัยราชภัฏรำไพพรรณี</strong> ร่วมกับ
+            <strong>บริษัท Go Digit จำกัด</strong>
+          </p>
         </div>
-        <!-- End Section Title -->
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="container">
+<!-- Principle & Issues Section (คงโครง, เกลาเนื้อหา) -->
+<section id="principle" class="about section bg-light">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>หลักการและเหตุผล</h2>
+    <p><span>แนวคิด</span> <span class="description-title">และประเด็นปัญหา</span></p>
+  </div>
 
-            <div class="row gy-3">
-
-                <!-- ภาพโครงการ -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ asset('img\aai.png') }}" alt="โครงการ Generative AI" class="img-fluid rounded shadow-sm">
-                </div>
-
-                <!-- รายละเอียดโครงการ -->
-                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-0 ps-lg-3">
-                        <h3 class="fw-bold text-primary mb-3">
-                            โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI
-                        </h3>
-
-                        <p class="fst-italic text-dark">
-                            เพื่อเสริมสร้างสมรรถนะบุคลากรในการยกระดับการบริหารภาครัฐดิจิทัล
-                            และเพิ่มความมั่นคงปลอดภัยของข้อมูลในสถานศึกษา
-                        </p>
-
-                        <ul class="list-unstyled">
-                            <li class="d-flex mb-3">
-                                <i class="bi bi-diagram-3 text-primary fs-4 me-3"></i>
-                                <div>
-                                    <h5 class="fw-semibold mb-1">พัฒนาระบบต้นแบบด้วย Generative AI</h5>
-                                    <p class="mb-0">สร้างแพลตฟอร์มบริหารจัดการที่ทันสมัย ยกระดับงานราชการสู่ดิจิทัล</p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="bi bi-shield-lock fs-4 text-primary me-3"></i>
-                                <div>
-                                    <h5 class="fw-semibold mb-1">เน้นความปลอดภัยของข้อมูล</h5>
-                                    <p class="mb-0">วางโครงสร้างการจัดการข้อมูลให้สอดคล้องกับมาตรฐานความปลอดภัยภาครัฐ</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <p class="mt-3">
-                            โครงการดำเนินการโดย <strong>มหาวิทยาลัยราชภัฏรำไพพรรณี จังหวัดจันทบุรี</strong>
-                            ร่วมกับ <strong>บริษัท Go Digit จำกัด</strong> ซึ่งมีความเชี่ยวชาญด้านนวัตกรรมเทคโนโลยีดิจิทัล
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-content pe-lg-3">
+          <h4 class="fw-bold text-primary mb-3">ความสำคัญ</h4>
+          <p>องค์กรภาครัฐและสถานศึกษาต้องการระบบดิจิทัลที่โปร่งใส ปลอดภัย และคล่องตัว พร้อมบุคลากรที่ใช้ AI อย่างมีประสิทธิภาพ</p>
+          <h5 class="fw-semibold text-dark mt-4">การเชื่อมโยงนโยบาย</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle text-primary me-2"></i>Thailand 4.0 และ Digital Government Development Plan</li>
+            <li><i class="bi bi-check-circle text-primary me-2"></i>แผนพัฒนาดิจิทัลแห่งชาติ</li>
+            <li><i class="bi bi-check-circle text-primary me-2"></i>กฎหมาย/แนวนโยบายด้านดิจิทัลและการคุ้มครองข้อมูล</li>
+          </ul>
         </div>
-    </section>
-    <!-- /About Section -->
-
-    <!-- Principle & Issues Section -->
-    <section id="principle" class="about section bg-light">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>หลักการและเหตุผล</h2>
-            <p><span>แนวคิด</span> <span class="description-title">และประเด็นปัญหาที่เกี่ยวข้อง</span></p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-content ps-lg-3">
+          <h4 class="fw-bold text-primary mb-3">ประเด็นปัญหา</h4>
+          <ol class="ps-3 text-dark">
+            <li class="mb-2"><strong>ข้อมูลกระจัดกระจาย</strong> ส่งผลต่อประสิทธิภาพการทำงานและการค้นคืนความรู้</li>
+            <li class="mb-2"><strong>ใช้งาน AI แบบแยกส่วน</strong> ทำให้งบประมาณซ้ำซ้อนและขาดการกำกับดูแล</li>
+            <li class="mb-2"><strong>ความมั่นคงปลอดภัย/สิทธิ์เข้าถึง</strong> ยังไม่ชัดเจนและตรวจสอบได้</li>
+            <li><strong>ทักษะบุคลากรด้าน AI</strong> ต้องการการยกระดับอย่างเป็นระบบ</li>
+          </ol>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="container">
-            <div class="row gy-4">
+<!-- Solution Section (คงโครง, เกลาให้ตรงเอกสาร) -->
+<section id="solution" class="about section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>แนวทางการแก้ไขปัญหา</h2>
+    <p><span>แนวทาง</span> <span class="description-title">การพัฒนาและขับเคลื่อน</span></p>
+  </div>
 
-                <!-- Left Column -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="about-content pe-lg-3">
-                        <h4 class="fw-bold text-primary mb-3">ความสำคัญของโครงการ</h4>
-                        <p>
-                            ในยุคที่โลกขับเคลื่อนด้วยเทคโนโลยีดิจิทัล ระบบอัตโนมัติ และ AI การบริหารจัดการข้อมูลภายในองค์กร
-                            โดยเฉพาะในสถานศึกษา มีบทบาทสำคัญในการเพิ่มประสิทธิภาพการทำงานของบุคลากร
-                            พร้อมทั้งตอบสนองการเปลี่ยนแปลงอย่างรวดเร็วด้วยระบบที่โปร่งใสและปลอดภัย
-                        </p>
-
-                        <h5 class="fw-semibold text-dark mt-4">การเชื่อมโยงกับนโยบายและแผนระดับชาติ:</h5>
-                        <ul class="list-unstyled">
-                            <li><i class="bi bi-check-circle text-primary me-2"></i>Thailand 4.0 และ Digital Government
-                                Development Plan 2563–2565</li>
-                            <li><i class="bi bi-check-circle text-primary me-2"></i>แผนพัฒนาดิจิทัลฯ แห่งชาติ ฉบับที่ 1
-                                (2560–2564)</li>
-                            <li><i class="bi bi-check-circle text-primary me-2"></i>พระราชบัญญัติการพัฒนาดิจิทัลฯ พ.ศ. 2560
-                            </li>
-                            <li><i class="bi bi-check-circle text-primary me-2"></i>แผนการศึกษาแห่งชาติ พ.ศ. 2560–2579</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-content ps-lg-3">
-                        <h4 class="fw-bold text-primary mb-3">ประเด็นปัญหาและความท้าทาย</h4>
-                        <ol class="ps-3 text-dark">
-                            <li class="mb-3">
-                                <strong>การจัดการข้อมูลและองค์ความรู้:</strong><br>
-                                ข้อมูลกระจัดกระจาย ค้นหาลำบาก ส่งผลต่อประสิทธิภาพการทำงาน
-                            </li>
-                            <li class="mb-3">
-                                <strong>การใช้งาน AI แบบแยกส่วน:</strong><br>
-                                ขาดการบูรณาการ ใช้งบประมาณซ้ำซ้อนจากการใช้แพลตฟอร์มหลายระบบ
-                            </li>
-                            <li class="mb-3">
-                                <strong>ความปลอดภัยและการควบคุม:</strong><br>
-                                ไม่มีระบบบริหารจัดการสิทธิ์อย่างชัดเจน เสี่ยงต่อข้อมูลรั่วไหล
-                            </li>
-                            <li>
-                                <strong>ขาดแคลนทักษะด้าน AI:</strong><br>
-                                บุคลากรขาดทักษะและแนวทางการพัฒนาอย่างต่อเนื่อง
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-
-            </div>
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-content pe-lg-4">
+          <p>พัฒนาแพลตฟอร์ม <strong>AI Governance</strong> สำหรับ GenAI (Access/Token/Logging/Policy) ควบคู่การอบรมและประเมินสมรรถนะผู้ใช้</p>
+          <h5 class="fw-semibold text-dark mt-4 mb-3">หัวใจของแนวทาง</h5>
+          <ul class="list-unstyled ps-2">
+            <li class="mb-2 d-flex"><i class="bi bi-shield-lock-fill text-primary me-3 fs-4"></i><p class="mb-0"><strong>ควบคุมการเข้าถึงและโทเคน</strong> โปร่งใสและตรวจสอบได้</p></li>
+            <li class="mb-2 d-flex"><i class="bi bi-person-check-fill text-primary me-3 fs-4"></i><p class="mb-0"><strong>เสริมสมรรถนะบุคลากร</strong> ผ่าน Workshop/Modules และแบบประเมิน</p></li>
+            <li class="mb-2 d-flex"><i class="bi bi-boxes text-primary me-3 fs-4"></i><p class="mb-0"><strong>ดำเนินงานแบบต้นแบบ (Pilot)</strong> เพื่อขยายผล</p></li>
+            <li class="d-flex"><i class="bi bi-diagram-3-fill text-primary me-3 fs-4"></i><p class="mb-0">สอดคล้องยุทธศาสตร์ AI แห่งชาติและรัฐบาลดิจิทัล</p></li>
+          </ul>
         </div>
-    </section>
-    <!-- /Principle & Issues Section -->
+      </div>
+      <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in" data-aos-delay="200">
+        <img src="{{ asset('img/aai2.png') }}" alt="AI Governance" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="about section">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>แนวทางการแก้ไขปัญหา</h2>
-            <p>
-                <span>แนวทาง</span>
-                <span class="description-title">การพัฒนาและขับเคลื่อนโครงการ</span>
-            </p>
-        </div>
+<!-- Objectives (อัปเดตให้สอดคล้องไฟล์แผนฯ) -->
+<section id="objectives" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title"><h2>วัตถุประสงค์</h2></div>
+    <div class="mb-5">
+      <h5 class="fw-bold">วัตถุประสงค์ของโครงการ</h5>
+      <ol>
+        <li>พัฒนาแพลตฟอร์มบริหารจัดการการใช้ Generative AI (บัญชี สิทธิ์ โทเคน บันทึกการใช้งาน)</li>
+        <li>ยกระดับสมรรถนะบุคลากรในการใช้ AI อย่างปลอดภัย โปร่งใส และมีจริยธรรม</li>
+        <li>จัดทำ <em>Guideline</em> การใช้ Generative AI สำหรับหน่วยงานภาครัฐ/สถานศึกษา</li>
+        <li>ขยายผลเชิงระบบสู่เครือข่ายการศึกษาและหน่วยงานรัฐระดับภูมิภาค</li>
+      </ol>
+    </div>
 
-        <div class="container">
-            <div class="row gy-4 align-items-center">
+    <div>
+      <h5 class="fw-bold">ตัวชี้วัดผลลัพธ์</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th style="width:5%">#</th>
+              <th style="width:30%">ตัวชี้วัด</th>
+              <th>คำอธิบาย</th>
+              <th style="width:20%">ค่าเป้าหมาย</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>แพลตฟอร์มต้นแบบพร้อมใช้งาน</td><td>บริหารบัญชี สิทธิ์ โทเคน และบันทึกการใช้งาน</td><td>แล้วเสร็จภายในโครงการ</td></tr>
+            <tr><td>2</td><td>การพัฒนาสมรรถนะบุคลากร</td><td>จัดอบรมเชิงปฏิบัติการและประเมินผลหลังอบรม</td><td>≥ 100 คน; ≥ 80% ผ่านเกณฑ์</td></tr>
+            <tr><td>3</td><td>จัดทำ Guideline</td><td>แนวทางการใช้ GenAI อย่างปลอดภัยและเหมาะสม</td><td>แล้วเสร็จและเผยแพร่</td></tr>
+            <tr><td>4</td><td>ความพึงพอใจผู้ใช้</td><td>สำรวจหลังใช้งานจริง</td><td>เฉลี่ย ≥ 75%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <!-- Text Content -->
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                    <div class="about-content pe-lg-4">
-                        <p>
-                            ในยุคที่ภาครัฐกำลังขับเคลื่อนสู่การเป็น <strong>รัฐบาลดิจิทัล (Digital Government)</strong>
-                            และสถานศึกษาต้องปรับตัวเข้าสู่ระบบการบริหารจัดการที่ทันสมัย การใช้เทคโนโลยี <strong>Generative
-                                AI</strong>
-                            กลายเป็นเครื่องมือสำคัญในการเพิ่มประสิทธิภาพการทำงาน ลดภาระงานซ้ำซ้อน และสนับสนุน
-                            <strong>Data-Driven Decision Making</strong>
-                        </p>
+<!-- Goals & Impact (คงโครง เกลาถ้อยคำ) -->
+<section id="goals-impact" class="section bg-light py-5">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title"><h2>เป้าหมาย / ผลผลิต / ผลสัมฤทธิ์ในวงกว้าง</h2></div>
+    <div class="mb-4">
+      <p>สร้างต้นแบบการใช้ GenAI อย่างมีระบบในสถานศึกษาและหน่วยงานรัฐ พร้อมยกระดับสมรรถนะบุคลากรและธรรมาภิบาลข้อมูล</p>
+    </div>
+    <div class="mb-5">
+      <h5 class="fw-bold">ผลผลิต</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">แพลตฟอร์มต้นแบบ (AI Gateway)</li>
+        <li class="list-group-item">อบรมบุคลากร ≥ 100 คน พร้อมแบบประเมิน</li>
+        <li class="list-group-item">เอกสาร Guideline การใช้ GenAI ภาครัฐ/สถานศึกษา</li>
+        <li class="list-group-item">รายงานความพึงพอใจผู้ใช้งาน</li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="fw-bold">ผลสัมฤทธิ์ (Outcomes)</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">เกิดต้นแบบการกำกับดูแล GenAI ในระดับท้องถิ่น/ภูมิภาค</li>
+        <li class="list-group-item">บุคลากรใช้ AI ได้อย่างมีจริยธรรมและปลอดภัย</li>
+        <li class="list-group-item">พร้อมต่อยอดการประยุกต์ใช้ AI ในงานบริการ/บริหาร/วิเคราะห์ข้อมูล</li>
+        <li class="list-group-item">มีแนวทางกำกับดูแลด้านนโยบาย/ความมั่นคง/PDPA</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-                        <p>
-                            อย่างไรก็ตาม หากไม่มีแนวทางการใช้งานที่ชัดเจน
-                            อาจก่อให้เกิดความเสี่ยงด้านความมั่นคงปลอดภัยของข้อมูล
-                            และกระทบต่อความน่าเชื่อถือขององค์กร
-                        </p>
+<!-- Target Beneficiaries (คงโครง) -->
+<section id="target-beneficiaries" class="section py-5 bg-white">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title"><h2>กลุ่มเป้าหมายและพื้นที่ดำเนินงาน</h2></div>
+    <ul class="list-group list-group-flush mb-4">
+      <li class="list-group-item">กลุ่มเป้าหมายหลัก: บุคลากรทางการศึกษาในจังหวัดจันทบุรี (นำร่อง) ~100 คน</li>
+      <li class="list-group-item">กลุ่มเป้าหมายรอง: เครือข่ายการศึกษาและหน่วยงานที่เกี่ยวข้อง</li>
+    </ul>
+    <p>พื้นที่นำร่อง: โรงเรียนในจังหวัดจันทบุรี และเตรียมขยายผลสู่เครือข่ายระดับภูมิภาค</p>
+  </div>
+</section>
 
-                        <h5 class="fw-semibold text-dark mt-4 mb-3">แนวทางการแก้ไข:</h5>
-                        <ul class="list-unstyled ps-2">
-                            <li class="mb-3 d-flex">
-                                <i class="bi bi-shield-lock-fill text-primary me-3 fs-4"></i>
-                                <p class="mb-0">
-                                    <strong>พัฒนาแพลตฟอร์มบริหารจัดการ Generative AI</strong>
-                                    ที่สามารถควบคุมการเข้าถึง การใช้โทเคน และตรวจสอบการใช้งานได้อย่างเป็นระบบ
-                                </p>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <i class="bi bi-person-check-fill text-primary me-3 fs-4"></i>
-                                <p class="mb-0">
-                                    <strong>เสริมสร้างสมรรถนะบุคลากร</strong>
-                                    ให้มีทักษะในการใช้ AI อย่างปลอดภัย มีจริยธรรม และเกิดประสิทธิภาพสูงสุด
-                                </p>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <i class="bi bi-boxes text-primary me-3 fs-4"></i>
-                                <p class="mb-0">
-                                    <strong>ดำเนินโครงการในลักษณะ “ต้นแบบ” (Pilot)</strong>
-                                    เพื่อเป็นแนวทางแก่สถานศึกษาและหน่วยงานภาครัฐในอนาคต
-                                </p>
-                            </li>
-                            <li class="d-flex">
-                                <i class="bi bi-diagram-3-fill text-primary me-3 fs-4"></i>
-                                <p class="mb-0">
-                                    อ้างอิงตาม <strong>ยุทธศาสตร์ปัญญาประดิษฐ์แห่งชาติ</strong> และ
-                                    <strong>นโยบายรัฐบาลดิจิทัล</strong> ของประเทศไทย
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Work Plan (แทนที่ด้วยโครงจากเอกสารแผนฯ) -->
+<section id="work-plan" class="section py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>แผนดำเนินงานและวิธีดำเนินงาน</h2>
+      <p>ดำเนินโครงการเป็นระยะ พร้อมชุดกิจกรรม/ผลลัพธ์ (Deliverables) ตามลำดับ</p>
+    </div>
 
-                <!-- Optional Image -->
-                <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('img/aai2.png') }}" alt="AI Governance" class="img-fluid rounded shadow">
-                </div>
+    <!-- Phase 1 -->
+    <div class="mb-4">
+      <h4>📌 ระยะที่ 1: วิเคราะห์ความต้องการ & ออกแบบระบบ</h4>
+      <ul>
+        <li>ประชุมวางแผนร่วม สำรวจการใช้ GenAI ในหน่วยงาน/สถานศึกษา</li>
+        <li>ออกแบบสถาปัตยกรรม AI Gateway (Access/Token/Logging/Governance)</li>
+        <li>กำหนดกรอบหลักสูตรและ Workshop Modules</li>
+      </ul>
+      <p class="mb-0"><strong>Deliverables:</strong> TOR/Architecture, Workplan, Syllabus เบื้องต้น</p>
+    </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- /Solution Section -->
+    <!-- Phase 2 -->
+    <div class="mb-4">
+      <h4>📌 ระยะที่ 2: พัฒนา Prototype & ชุดเนื้อหาอบรม</h4>
+      <ul>
+        <li>พัฒนาและทดสอบระบบต้นแบบ (Prototype)</li>
+        <li>สร้างระบบบัญชี สิทธิ์ และการควบคุมโทเคน</li>
+        <li>จัดทำ Workshop Modules & แบบประเมิน</li>
+        <li>ร่าง Guideline การใช้ GenAI อย่างปลอดภัย</li>
+      </ul>
+      <p class="mb-0"><strong>Deliverables:</strong> Prototype v1, Workshop Pack v1, Draft Guideline</p>
+    </div>
 
-    <!-- Objectives Section -->
-    <section id="objectives" class="section light-background">
-        <div class="container" data-aos="fade-up">
+    <!-- Phase 3 -->
+    <div class="mb-4">
+      <h4>📌 ระยะที่ 3: นำไปใช้จริง & ประเมิน</h4>
+      <ul>
+        <li>อบรมบุคลากร ≥ 100 คน และประเมินหลังอบรม</li>
+        <li>ทดสอบใช้ระบบในหน่วยงานต้นแบบ/สถานศึกษา</li>
+        <li>สำรวจความพึงพอใจและรวบรวมข้อเสนอแนะ</li>
+      </ul>
+      <p class="mb-0"><strong>Deliverables:</strong> Training Report, Satisfaction Survey, Prototype v2</p>
+    </div>
 
-            <!-- Section Title -->
-            <div class="section-title">
-                <h2>วัตถุประสงค์</h2>
-            </div>
+    <!-- Phase 4 -->
+    <div>
+      <h4>📌 ระยะที่ 4: สรุปผล & ขยายผล</h4>
+      <ul>
+        <li>สังเคราะห์บทเรียน/กรณีศึกษา จัดประชุมวิชาการย่อย/เวทีแลกเปลี่ยน</li>
+        <li>จัดทำรายงานฉบับสมบูรณ์และข้อเสนอเชิงนโยบาย</li>
+        <li>เผยแพร่ Guideline และแผนขยายผล</li>
+      </ul>
+      <p class="mb-0"><strong>Deliverables:</strong> Final Report, Guideline (Public), Policy Brief</p>
+    </div>
+  </div>
+</section>
 
-            <!-- Objectives List -->
-            <div class="mb-5">
-                <h5 class="fw-bold">วัตถุประสงค์ของโครงการ</h5>
-                <ol>
-                    <li>เพื่อพัฒนาแพลตฟอร์มบริหารจัดการการใช้เครื่องมือ Generative AI สำหรับหน่วยงานการศึกษาและภาครัฐ</li>
-                    <li>เพื่อส่งเสริมการใช้ Generative AI อย่างปลอดภัย โปร่งใส และสอดคล้องกับนโยบายความมั่นคงด้านข้อมูล</li>
-                    <li>เพื่อยกระดับทักษะบุคลากรในการใช้ AI อย่างมีประสิทธิภาพ โดยเฉพาะในการกิจสนับสนุนการบริหารภาครัฐ</li>
-                    <li>เพื่อเป็นต้นแบบของการนำเทคโนโลยี AI ไปใช้ในระดับท้องถิ่นตามแนวทางการพัฒนาอย่างยั่งยืน</li>
-                </ol>
-            </div>
+<!-- NEW: Budget Summary (เพิ่มใหม่จากเอกสารแผนฯ) -->
+<section id="budget" class="section py-5 bg-white">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>สรุปงบประมาณโครงการ</h2>
+      <p>ประมาณการงบประมาณรวม <strong>1,000,000 บาท</strong> แบ่งตามหมวดค่าใช้จ่ายหลัก</p>
+    </div>
 
-            <!-- Indicators Table -->
-            <div>
-                <h5 class="fw-bold">ตัวชี้วัดผลลัพธ์</h5>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped align-middle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th style="width: 5%;">#</th>
-                                <th style="width: 30%;">ตัวชี้วัด</th>
-                                <th><p>คำอธิบายผลลัพธ์ที่คาดว่าจะเกิดขึ้น</p></th>
-                                <th style="width: 20%;"><p>ค่าที่ตั้งเป้า (Target)</p></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>ระบบแพลตฟอร์มบริหารจัดการการใช้ Generative AI ได้รับการพัฒนาและใช้งานจริง</td>
-                                <td>มีระบบต้นแบบ (Prototype) ที่สามารถจัดการบัญชีผู้ใช้งาน การกำหนดสิทธิ์ และการควบคุมการใช้
-                                    AI Tools (Token Management & Access Control)</td>
-                                <td>พัฒนาและใช้งานได้ 100% ภายในระยะเวลาโครงการ</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>บุคลากรได้รับการพัฒนาทักษะด้าน Generative AI</td>
-                                <td>จำนวนบุคลากรที่เข้าร่วมอบรมเชิงปฏิบัติการ และผ่านการประเมินสมรรถนะตามเกณฑ์</td>
-                                <td>อย่างน้อย 100 คน ผ่านการอบรม และ 80% ผ่านการประเมินหลังอบรม</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>คู่มือหรือแนวปฏิบัติ (Guideline) การใช้งาน Generative AI ในภาครัฐและสถานศึกษา</td>
-                                <td>จัดทำเอกสารแนวทางการใช้งาน Generative AI อย่างปลอดภัย มีจริยธรรม
-                                    และเหมาะสมกับภารกิจราชการ</td>
-                                <td>แล้วเสร็จภายในระยะเวลาโครงการ และนำเสนอหน่วยงานที่เกี่ยวข้อง</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>ระดับความพึงพอใจของผู้ใช้งานแพลตฟอร์ม</td>
-                                <td>การประเมินผลหลังใช้งานจริงของบุคลากรในสถานศึกษา</td>
-                                <td>ได้คะแนนเฉลี่ยความพึงพอใจ ≥ 75%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th style="width:5%">#</th>
+            <th style="width:35%">หมวดค่าใช้จ่าย</th>
+            <th>รายละเอียดโดยสรุป</th>
+            <th style="width:15%">งบ (บาท)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>ค่าดำเนินงาน/บุคลากรโครงการ</td>
+            <td>ค่าตอบแทน/ผู้เชี่ยวชาญ/วิทยากร/บริหารจัดการกิจกรรม</td>
+            <td>≈ 340,000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>กิจกรรม/สื่อ/การจัดอบรม</td>
+            <td>พัฒนา/ผลิตสื่อ, ค่าใช้จ่ายเวิร์กช็อป, เอกสาร, ประชาสัมพันธ์ ฯลฯ</td>
+            <td>≈ 320,000–360,000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>ระบบ AI Gateway (Prototype)</td>
+            <td>พัฒนา/ทดสอบระบบต้นแบบ (Access/Token/Logging/Governance)</td>
+            <td>≈ 340,000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>เงินสำรองจ่าย/เผื่อเหลือเผื่อขาด</td>
+            <td>ไม่เกิน 10% ของวงเงิน</td>
+            <td>≈ 100,000</td>
+          </tr>
+          <tr class="table-secondary">
+            <td colspan="3" class="text-end fw-bold">รวม</td>
+            <td class="fw-bold">1,000,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        </div>
-    </section>
+    <p class="text-muted small mb-0">
+      *ตัวเลขย่อยเป็นสรุปเชิงหมวดจากเอกสารแผนปฏิบัติการ/แผนใช้จ่าย เพื่อสื่อสารบนหน้าเว็บ (รายละเอียดเต็มอยู่ในเอกสารอนุมัติ)
+    </p>
+  </div>
+</section>
 
-    <section id="goals-impact" class="section bg-light py-5">
-        <div class="container" data-aos="fade-up">
+<!-- NEW: Progress Q1 (เพิ่มใหม่จากเอกสารส่งงวด 1) -->
+<section id="progress-q1" class="about section bg-light">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>รายงานความก้าวหน้า (งวดที่ 1)</h2>
+    <p><span>สถานะ</span> <span class="description-title">และผลการดำเนินงานช่วงต้น</span></p>
+  </div>
 
-            <div class="section-title">
-                <h2>เป้าหมาย / ผลผลิต / ผลสัมฤทธิ์ที่เกิดในวงกว้าง</h2>
-            </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="about-content">
+      <ul>
+        <li>ดำเนินกิจกรรมตามแผนระยะเริ่มต้น (สำรวจ/ออกแบบ/เตรียม Prototype & Modules)</li>
+        <li>จัดทำเอกสารประกอบความก้าวหน้าและส่งรายงานงวดที่ 1</li>
+        <li>เบิกจ่ายตามกรอบกิจกรรมที่อนุมัติ (ตามรายละเอียดในรายงานส่งงวด 1)</li>
+      </ul>
+      <p class="mb-0 text-muted small">*รายละเอียดเชิงเอกสาร/ตัวเลขอ้างอิงตามรายงาน “ส่งงวด 1”</p>
+    </div>
+  </div>
+</section>
 
-            <div class="mb-4">
-                <p>
-                    เพื่อพัฒนาแพลตฟอร์มบริหารจัดการการใช้ <strong>Generative AI</strong>
-                    และยกระดับสมรรถนะบุคลากรในการใช้เทคโนโลยี AI อย่างปลอดภัย มีประสิทธิภาพ
-                    และสอดคล้องกับภารกิจของการบริหารภาครัฐดิจิทัลในสถานศึกษา
-                    ตลอดจนวางรากฐานเพื่อการขยายผลไปยังหน่วยงานราชการและสถานศึกษาอื่นในระดับภูมิภาค
-                </p>
-            </div>
+<!-- Project Summary (คงโครง เกลาถ้อยคำ) -->
+<section id="project-summary" class="about section bg-light">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>สรุปโครงการ</h2>
+    <p><span>ภาพรวม</span> <span class="description-title">ผลลัพธ์ที่คาดหวัง</span></p>
+  </div>
 
-            <div class="mb-5">
-                <h5 class="fw-bold">ผลผลิตและผลสัมฤทธิ์ที่คาดว่าจะเกิดขึ้น</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">📌 ระบบต้นแบบแพลตฟอร์มบริหารจัดการการใช้ Generative AI
-                        พร้อมใช้งานจริงในหน่วยงานต้นแบบ</li>
-                    <li class="list-group-item">📌 บุคลากรจำนวนไม่น้อยกว่า 100 คนผ่านการอบรมและประเมินสมรรถนะการใช้
-                        Generative AI</li>
-                    <li class="list-group-item">📌 เอกสารแนวทาง (Guideline) การใช้ Generative AI
-                        อย่างปลอดภัยและเหมาะสมกับภารกิจภาครัฐ</li>
-                    <li class="list-group-item">📌 รายงานการประเมินความพึงพอใจของผู้ใช้งานแพลตฟอร์ม</li>
-                </ul>
-            </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="about-content">
+      <p>โครงการมุ่งสร้างแพลตฟอร์มต้นแบบสำหรับกำกับดูแลการใช้ GenAI ในสถานศึกษาและหน่วยงานรัฐ พร้อมยกระดับทักษะบุคลากรและสร้างแนวทางกำกับดูแลที่ปลอดภัยและตรวจสอบได้</p>
+      <p>ผลที่คาดว่าจะได้รับ ได้แก่ ระบบต้นแบบพร้อมใช้งานจริง ชุด Workshop & Guideline สำหรับการใช้งานอย่างรับผิดชอบ บุคลากรผ่านการอบรม ≥ 100 คน และการประเมินความพึงพอใจระดับที่น่าพอใจ พร้อมข้อเสนอเชิงนโยบายเพื่อขยายผล</p>
+    </div>
+  </div>
+</section>
 
-            <div>
-                <h5 class="fw-bold">ผลสัมฤทธิ์ที่เกิดในวงกว้าง (Outcomes / Broader Impacts)</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">✅ เกิดต้นแบบการใช้ Generative AI
-                        อย่างมีระบบในภาครัฐระดับท้องถิ่นและสถานศึกษา</li>
-                    <li class="list-group-item">✅ บุคลากรมีความรู้ ความสามารถ และจริยธรรมในการใช้เทคโนโลยี AI
-                        ในการปฏิบัติงาน</li>
-                    <li class="list-group-item">✅ หน่วยงานต้นแบบมีความพร้อมในการต่อยอดการประยุกต์ใช้ AI ในงานบริการประชาชน
-                        การบริหารจัดการภายใน และการวิเคราะห์ข้อมูล</li>
-                    <li class="list-group-item">✅ เกิดความตระหนักรู้และแนวทางการบริหารจัดการเทคโนโลยี AI ในมิตินโยบาย
-                        ความมั่นคงปลอดภัย และการคุ้มครองข้อมูลส่วนบุคคล</li>
-                </ul>
-            </div>
+<!-- Attachments Section -->
+<section id="attachments" class="section py-5 bg-white">
+  <div class="container" data-aos="fade-up">
 
-        </div>
-    </section>
+    <div class="section-title">
+      <h2>เอกสารแนบ</h2>
+      <p><span></span> <span class="description-title">ไฟล์ประกอบโครงการ</span></p>
+    </div>
 
-    <section id="target-beneficiaries" class="section py-5 bg-white">
-        <div class="container" data-aos="fade-up">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th style="width:5%;">#</th>
 
-            <div class="section-title">
-                <h2>กลุ่มเป้าหมายที่ได้รับประโยชน์</h2>
-            </div>
+            <th>คำอธิบาย</th>
+            <th style="width:15%;">ดาวน์โหลด</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
 
-            <ul class="list-group list-group-flush mb-5">
-                <li class="list-group-item">
-                    👥 <strong>กลุ่มเป้าหมายหลัก:</strong>
-                    บุคลากรทางการศึกษาจากโรงเรียนในจังหวัดจันทบุรีที่เข้าร่วมโครงการนำร่อง จำนวน <strong>100 คน</strong>
-                </li>
-                <li class="list-group-item">
-                    👥 <strong>กลุ่มเป้าหมายรอง:</strong> บุคลากรทางการศึกษาในเครือข่ายที่เข้าร่วมโครงการนำร่องเพิ่มเติม
-                    จำนวน <strong>50 คน</strong>
-                </li>
-            </ul>
+            <td>รายงานความก้าวหน้าและการเบิกจ่ายงวดที่ 1</td>
+            <td class="text-center">
+              <a href="{{ asset('files/letter1.pdf') }}" class="btn btn-sm btn-primary" target="_blank">
+                <i class="bi bi-file-earmark-pdf"></i> ดาวน์โหลด
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
 
-            <div class="section-title">
-                <h2>พื้นที่ดำเนินงาน</h2>
-            </div>
+            <td>รายละเอียดกิจกรรม แผนการใช้จ่าย และงบประมาณ</td>
+            <td class="text-center">
+              <a href="{{ asset('files/plans1.pdf') }}" class="btn btn-sm btn-primary" target="_blank">
+                <i class="bi bi-file-earmark-pdf"></i> ดาวน์โหลด
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            <p>
-                โครงการนี้ดำเนินการในพื้นที่ <strong>โรงเรียนในจังหวัดจันทบุรี</strong>
-                ซึ่งเป็นพื้นที่นำร่องที่มีความพร้อมด้านโครงสร้างพื้นฐานทางเทคโนโลยี
-                และมีแนวทางการจัดการเรียนรู้เพื่อความยั่งยืนที่ชัดเจน
-            </p>
-            <p>
-                ในระยะต่อไป โครงการมีเป้าหมายในการ <strong>ขยายผลสู่นวัตกรรมการศึกษา</strong> และ
-                <strong>เครือข่ายในภูมิภาคอื่น ๆ ทั่วประเทศ</strong> เพื่อสร้างการเปลี่ยนแปลงอย่างยั่งยืนในระดับประเทศ
-            </p>
-
-        </div>
-    </section>
-
-    <section id="work-plan" class="section py-5 bg-light">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>แผนดำเนินงานและวิธีการดำเนินงาน</h2>
-                <p>การดำเนินโครงการจะแบ่งออกเป็น 4 ระยะหลัก โดยแต่ละระยะมีเป้าหมายและกิจกรรมที่ชัดเจน
-                    เพื่อให้สามารถพัฒนาแพลตฟอร์มและสร้างการเปลี่ยนแปลงเชิงระบบได้อย่างเป็นรูปธรรม</p>
-            </div>
-
-            <!-- Phase 1 -->
-            <div class="mb-4">
-                <h4>📌 ระยะที่ 1: การวางแผนและออกแบบระบบ (เดือนที่ 1)</h4>
-                <ul>
-                    <li>ประชุมวางแผนร่วมระหว่างมหาวิทยาลัยและบริษัท Go Digit จำกัด</li>
-                    <li>สำรวจความต้องการและลักษณะการใช้งาน Generative AI ในสถานศึกษาและหน่วยงานภาครัฐ</li>
-                    <li>ออกแบบโครงสร้างระบบแพลตฟอร์มบริหารจัดการ AI (AI Access, Token Management, User Governance)</li>
-                    <li>กำหนดกรอบหลักสูตรและแนวทางการอบรมบุคลากร</li>
-                </ul>
-            </div>
-
-            <!-- Phase 2 -->
-            <div class="mb-4">
-                <h4>📌 ระยะที่ 2: การพัฒนาแพลตฟอร์มและสื่ออบรม (เดือนที่ 2-3)</h4>
-                <ul>
-                    <li>พัฒนาและทดสอบระบบต้นแบบ (Prototype)</li>
-                    <li>สร้างระบบบัญชีผู้ใช้งาน สิทธิ์การเข้าถึง และระบบควบคุมการใช้โทเคน</li>
-                    <li>จัดทำชุดเนื้อหาอบรมเชิงปฏิบัติการ (Workshop Modules) และแนวทางประเมินสมรรถนะ</li>
-                    <li>ออกแบบเอกสารแนวทาง (Guideline) การใช้งาน Generative AI อย่างปลอดภัย</li>
-                </ul>
-            </div>
-
-            <!-- Phase 3 -->
-            <div class="mb-4">
-                <h4>📌 ระยะที่ 3: การนำไปใช้จริงและพัฒนาองค์ความรู้ (เดือนที่ 4-5)</h4>
-                <ul>
-                    <li>ดำเนินการจัดอบรมบุคลากรไม่น้อยกว่า 100 คน</li>
-                    <li>นำระบบแพลตฟอร์มไปทดลองใช้จริงในสถานศึกษาต้นแบบ</li>
-                    <li>ประเมินผลการใช้งาน ทั้งด้านสมรรถนะผู้ใช้งานและระดับความพึงพอใจ</li>
-                    <li>จัดกิจกรรมถ่ายทอดความรู้ (เวิร์กช็อป, กรณีศึกษา)</li>
-                </ul>
-            </div>
-
-            <!-- Phase 4 -->
-            <div>
-                <h4>📌 ระยะที่ 4: การสรุปผลและขยายผล (เดือนที่ 6)</h4>
-                <ul>
-                    <li>วิเคราะห์ข้อมูลจากการใช้งานจริง และสรุปผลลัพธ์ของโครงการ</li>
-                    <li>จัดทำรายงานฉบับสมบูรณ์ พร้อมข้อเสนอเชิงนโยบายและแนวทางขยายผล</li>
-                    <li>จัดประชุมวิชาการย่อย หรือเวทีแลกเปลี่ยนเรียนรู้ เพื่อเผยแพร่ผลลัพธ์</li>
-                    <li>ประเมินผลลัพธ์และจัดทำข้อเสนอแนะสำหรับโครงการระยะต่อไป</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="project-summary" class="about section bg-light">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>สรุปโครงการ</h2>
-            <p><span>ภาพรวม</span> <span class="description-title">ของโครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้
-                    Generative AI</span></p>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="about-content">
-                <p>
-                    โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI
-                    มุ่งเน้นการพัฒนาเครื่องมือและระบบบริหารจัดการที่ทันสมัย
-                    เพื่อเสริมสมรรถนะบุคลากรภาครัฐและสถานศึกษาในการใช้เทคโนโลยี Generative AI อย่างปลอดภัย โปร่งใส
-                    และสอดคล้องกับนโยบายความมั่นคงด้านข้อมูล
-                    โครงการนี้มีเป้าหมายหลักในการสร้างต้นแบบแพลตฟอร์มที่สามารถจัดการบัญชีผู้ใช้งาน
-                    กำหนดสิทธิ์ และควบคุมการใช้ AI Tools พร้อมทั้งจัดอบรมบุคลากรทางการศึกษาจากโรงเรียนในจังหวัดจันทบุรีจำนวน
-                    100 คน
-                    เพื่อยกระดับทักษะและความรู้ด้าน AI อย่างมีประสิทธิภาพ
-                </p>
-                <p>
-                    เมื่อโครงการแล้วเสร็จ คาดว่าจะได้ระบบต้นแบบแพลตฟอร์มบริหารจัดการ Generative AI ที่ใช้งานได้จริง
-                    คู่มือแนวทางการใช้งาน AI อย่างปลอดภัย
-                    และบุคลากรที่มีทักษะพร้อมจริยธรรมในการใช้ AI ในงานราชการ
-                    นอกจากนี้ยังจะสร้างความตระหนักรู้และแนวทางการบริหารจัดการเทคโนโลยี AI ที่เหมาะสมในระดับท้องถิ่น
-                    เพื่อเป็นพื้นฐานสำหรับการขยายผลไปยังหน่วยงานและสถานศึกษาอื่น ๆ ในภูมิภาคอย่างยั่งยืน
-                    โครงการดำเนินการร่วมกับมหาวิทยาลัยราชภัฏรำไพพรรณี
-                    และบริษัท Go Digit จำกัด ที่มีความเชี่ยวชาญด้านนวัตกรรมเทคโนโลยีดิจิทัล
-                </p>
-            </div>
-        </div>
-    </section>
+  </div>
+</section>
 
 
 
