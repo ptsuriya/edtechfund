@@ -36,3 +36,7 @@ Route::get('/faq', function () {
 
 Route::get('/about/reserchers', [AboutController::class, 'reserchers'])->name('about_reserchers');
 
+Route::get('/register', function () {
+    return view('pages.register');
+})->name('register');
+

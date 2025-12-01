@@ -1,0 +1,96 @@
+@extends('layouts.master')
+
+@section('title', 'รับสมัครเข้าโครงการ')
+@section('meta_description', 'รับสมัครเข้าโครงการต้นแบบแพลตฟอร์มและบริหารจัดการ การใช้ Generative AI')
+
+@section('content')
+@include('components.headbanner')
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-sm" data-aos="fade-up">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-5" data-aos="fade-down">
+                            <h1 class="fw-bold text-primary mb-3">ขอเชิญชวนเข้าร่วม</h1>
+                            <h2 class="h4 mb-4">โครงการต้นแบบแพลตฟอร์มและบริหารจัดการ การใช้ Generative AI <br>และการเสริมสร้างสมรรถนะบุคลากร เพื่อยกระดับการบริหารภาครัฐดิจิทัล <br>และความมั่นคงปลอดภัยของข้อมูลในสถานศึกษา</h2>
+                            <span class="badge bg-info text-white fs-5 px-4 py-2 rounded-pill">เปิดรับ 100 ท่านเท่านั้น</span>
+                        </div>
+
+                        <div class="row mb-5 justify-content-center">
+                            <div class="col-md-8">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3" data-aos="fade-right">หัวข้อการอบรม</h3>
+                                <ul class="list-unstyled" data-aos="fade-right" data-aos-delay="100">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>แนะนำกรอบสมรรถนะ AI Competency</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Foundations & Human-centered Mindset</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ethics of AI in Education</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Pedagogy: การใช้ AI ในการสอนและการประเมิน</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>สรุปและวางแผน</li>
+                                </ul>
+
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3 mt-4" data-aos="fade-left">วิทยากร</h3>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
+                                        <img src="{{ asset('img/aphichat.jpg') }}" alt="อาจารย์ ดร.อภิชาติ อนุกูลเวช" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
+                                        <h5 class="fw-bold">อาจารย์ ดร.อภิชาติ อนุกูลเวช</h5>
+                                    </div>
+                                    <div class="col-md-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
+                                        <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขวัจวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
+                                        <h5 class="fw-bold">อาจารย์ ดร.พีรญา สุขวัจวรรณ</h5>
+                                    </div>
+                                </div>
+
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3 mt-4" data-aos="fade-up">คุณสมบัติผู้เข้าอบรม</h3>
+                                <ol class="ps-3" data-aos="fade-up" data-aos-delay="100">
+                                    <li class="mb-2">มีทักษะการใช้คอมพิวเตอร์เพื่อการทำงาน</li>
+                                    <li class="mb-2">มีประสบการณ์ในการใช้แอพพลิเคชั่น</li>
+                                    <li class="mb-2">สามารถเข้าร่วม PLC ผ่านออนไลน์เพื่อติดตามผล (จำนวน 3 ครั้ง)</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="row bg-light p-4 rounded mb-5" data-aos="fade-up">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <h4 class="fw-bold text-primary"><i class="bi bi-calendar-event me-2"></i>วันและเวลา</h4>
+                                <p class="fs-5 mb-1">อบรมวันที่ 27 มกราคม 2569</p>
+                                <p class="text-muted"><small>เปิดรับสมัครวันนี้ ถึงวันที่ 19 มกราคม 2569</small></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="fw-bold text-primary"><i class="bi bi-geo-alt me-2"></i>สถานที่</h4>
+                                <p class="fs-5 mb-0">ณ มหาวิทยาลัยราชภัฏรำไพพรรณี</p>
+                                <p class="mb-0">ตึก 35 ห้อง 35307</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-5" data-aos="fade-up">
+                            <h3 class="fw-bold mb-4">ลงทะเบียนและตรวจสอบรายชื่อ</h3>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDM0PuBWWLxBQOhLinFXUKHB2ikdHhIta_IvGPZWWLwXhvIA/viewform" target="_blank" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+                                    <i class="bi bi-pencil-square me-2"></i>สมัครเข้าร่วม
+                                </a>
+                                <a href="https://docs.google.com/spreadsheets/d/1tF7vu2mdmxnOWWgsysGFiWAnD0wtR_knQMNvYZ3YAhE/edit?gid=1763461469#gid=1763461469" target="_blank" class="btn btn-outline-primary btn-lg px-5 rounded-pill shadow">
+                                    <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อ
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="text-center text-muted mt-4 mb-5" data-aos="fade-up">
+                            <p class="mb-1"><strong>สอบถามข้อมูลเพิ่มเติมได้ที่</strong></p>
+                            <p class="mb-1">หน่วยฝึกอบรม สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</p>
+                            <p class="mb-1"><i class="bi bi-telephone me-1"></i>โทรศัพท์ 039-319111 ต่อ 10990</p>
+                            <p><i class="bi bi-envelope me-1"></i>arc@rbru.ac.th</p>
+                        </div>
+
+                        <div class="text-center" data-aos="fade-up">
+                            <img src="{{ asset('img/S__2375702.jpg') }}" alt="Poster" class="img-fluid rounded shadow" style="max-height: 800px;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
