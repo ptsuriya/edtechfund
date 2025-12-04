@@ -24,8 +24,7 @@
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Foundations & Human-centered Mindset</li>
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ethics of AI in Education</li>
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Pedagogy: การใช้ AI ในการสอนและการประเมิน</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>สรุปและวางแผน</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development สรุปและวางแผน</li>
                                 </ul>
 
                                 <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3 mt-4" data-aos="fade-left">วิทยากร</h3>
@@ -35,8 +34,8 @@
                                         <h5 class="fw-bold">อาจารย์ ดร.อภิชาติ อนุกูลเวช</h5>
                                     </div>
                                     <div class="col-md-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
-                                        <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขวัจวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold">อาจารย์ ดร.พีรญา สุขวัจวรรณ</h5>
+                                        <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขขีวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
+                                        <h5 class="fw-bold">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
                                     </div>
                                 </div>
 
