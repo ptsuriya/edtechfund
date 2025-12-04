@@ -316,21 +316,96 @@
   </div>
 </section>
 
-<!-- NEW: Progress Q1 (เพิ่มใหม่จากเอกสารส่งงวด 1) -->
-<section id="progress-q1" class="about section bg-light">
+<!-- Updated Training Snapshot -->
+<section id="training-latest" class="section py-5" style="background: linear-gradient(180deg, #f8fbff 0%, #fff7ed 100%);">
   <div class="container section-title" data-aos="fade-up">
-    <h2>รายงานความก้าวหน้า (งวดที่ 1)</h2>
-    <p><span>สถานะ</span> <span class="description-title">และผลการดำเนินงานช่วงต้น</span></p>
+    <h2>กำหนดการอบรมล่าสุด</h2>
+    <p><span>สรุปข้อมูลใหม่</span> <span class="description-title">พร้อมลิงก์สมัคร</span></p>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="about-content">
-      <ul>
-        <li>ดำเนินกิจกรรมตามแผนระยะเริ่มต้น (สำรวจ/ออกแบบ/เตรียม Prototype & Modules)</li>
-        <li>จัดทำเอกสารประกอบความก้าวหน้าและส่งรายงานงวดที่ 1</li>
-        <li>เบิกจ่ายตามกรอบกิจกรรมที่อนุมัติ (ตามรายละเอียดในรายงานส่งงวด 1)</li>
-      </ul>
-      <p class="mb-0 text-muted small">*รายละเอียดเชิงเอกสาร/ตัวเลขอ้างอิงตามรายงาน “ส่งงวด 1”</p>
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-7">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-3">ตารางกำหนดการ (อัปเดตจาก “กำหนดการ Ver.2_4 Modules.docx”)</h5>
+            <div class="timeline">
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">08:00-08:30</div>
+                <div>
+                  <div class="fw-semibold">ลงทะเบียนและเตรียมความพร้อม</div>
+                  <small class="text-muted">ลงทะเบียน ตรวจสอบอุปกรณ์และอินเทอร์เน็ต</small>
+                </div>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">08:30-09:00</div>
+                <div class="fw-semibold">พิธีเปิดโครงการ</div>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">09:00-10:30</div>
+                <div>
+                  <div class="fw-semibold">การออกแบบแผนการสอนด้วย Generative AI</div>
+                  <small class="text-muted d-block">กิจกรรม: เขียนแผนการสอน T-pack | วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช</small>
+                </div>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">10:30-12:00</div>
+                <div>
+                  <div class="fw-semibold">การออกแบบกิจกรรมการเรียนรู้ด้วย Generative AI</div>
+                  <small class="text-muted d-block">วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช, อ.ดร.พีรญา สุขขีวรรณ</small>
+                </div>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">12:00-13:00</div>
+                <div class="fw-semibold">พักรับประทานอาหาร</div>
+              </div>
+              <div class="mb-3 d-flex">
+                <div class="me-3 fw-bold text-primary">13:00-14:30</div>
+                <div>
+                  <div class="fw-semibold">การใช้ Generative AI เพื่อการวิจัยในชั้นเรียนอย่างมีจริยธรรม</div>
+                  <small class="text-muted d-block">วิทยากร: อ.ดร.พีรญา สุขขีวรรณ, คุณปัญจพัฒน์ เกรียงวีระยุทธ</small>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="me-3 fw-bold text-primary">14:30-16:00</div>
+                <div>
+                  <div class="fw-semibold">การใช้ Generative AI เพื่อลดภาระงานที่ไม่ใช่งานสอน</div>
+                  <small class="text-muted d-block">วิทยากร: คุณปัญจพัฒน์ เกรียงวีระยุทธ</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-info text-white fs-6 px-3 py-2 rounded-pill">เปิดรับ 100 ท่าน</span>
+                <span class="text-primary fw-bold"><i class="bi bi-calendar-event me-1"></i>27 ม.ค. 2569</span>
+              </div>
+              <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307</p>
+              <p class="mb-3 text-muted"><small>เปิดรับสมัครถึง 19 มกราคม 2569</small></p>
+              <h6 class="fw-bold text-secondary">หัวข้อเด่น</h6>
+              <ul class="list-unstyled mb-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>AI Competency Framework</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Ethics & Human-centered AI</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>AI Pedagogy & Assessment</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development</li>
+              </ul>
+            </div>
+            <div class="d-grid gap-2">
+              <a href="{{ route('register') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-2"></i>สมัคร / อ่านรายละเอียด
+              </a>
+              <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-outline-primary" target="_blank">
+                <i class="bi bi-file-earmark-text me-2"></i>ดาวน์โหลดกำหนดการล่าสุด
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -387,6 +462,16 @@
             <td class="text-center">
               <a href="{{ asset('files/plans1.pdf') }}" class="btn btn-sm btn-primary" target="_blank">
                 <i class="bi bi-file-earmark-pdf"></i> ดาวน์โหลด
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+
+            <td>กำหนดการโครงการ</td>
+            <td class="text-center">
+              <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-sm btn-primary" target="_blank">
+                <i class="bi bi-file-earmark-text"></i> ดาวน์โหลด
               </a>
             </td>
           </tr>

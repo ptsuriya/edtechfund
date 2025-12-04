@@ -47,6 +47,17 @@
                                 </a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>3</td>
+
+                            <td>กำหนดการโครงการ</td>
+                            <td class="text-center">
+                                <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-sm btn-primary"
+                                    target="_blank">
+                                    <i class="bi bi-file-earmark-text"></i> ดาวน์โหลด
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -1,5 +1,5 @@
 <!-- Faq Section -->
-<section id="faq" class="faq section light-background">
+<section id="faq" class="faq section light-background" style="background: #f5f7fa;">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">

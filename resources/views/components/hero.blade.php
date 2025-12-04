@@ -23,8 +23,9 @@
                                     ในพิธีพระราชทานประกาศนียบัตรของวิทยาลัยครูจันทบุรี รุ่นที่ 2
                                     ณ วันที่ 30 มีนาคม 2515
                                 </p>
-                                <div class="d-flex justify-content-center mt-3">
-                                    <a href="#pricing" class="btn btn-primary">เข้าสู่ระบบ</a>
+                                <div class="d-flex flex-column align-items-center mt-3">
+                                    <img src="{{ asset('img/4.png') }}" class="img-fluid rounded mb-3" alt="Edtech Fund">
+                                    <a href="https://edtechfund.rbru.ac.th/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">เข้าใช้งาน AI</a>
                                 </div>
                             </div>
                         </div>
