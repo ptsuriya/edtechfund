@@ -3,6 +3,31 @@
 @section('title', 'RBRU X Edtech Fund AI Gateway')
 @section('meta_description', 'โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI')
 
+@push('json_ld')
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "อบรม Generative AI สำหรับบุคลากรทางการศึกษา",
+      "description": "โครงการต้นแบบแพลตฟอร์มการบริหารและจัดการการใช้ Generative AI",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "startDate": "2026-01-27",
+      "location": {
+        "@type": "Place",
+        "name": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307",
+        "address": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "มหาวิทยาลัยราชภัฏรำไพพรรณี"
+      },
+      "url": "{{ url('/about') }}",
+      "inLanguage": "th-TH"
+    }
+  </script>
+@endpush
+
 @section('content')
 @include('components.headbanner')
 
@@ -396,9 +421,11 @@
               </ul>
             </div>
             <div class="d-grid gap-2">
+              {{--
               <a href="{{ route('register') }}" class="btn btn-primary">
-                <i class="bi bi-pencil-square me-2"></i>สมัคร / อ่านรายละเอียด
+                <i class="bi bi-pencil-square me-2"></i>อ่านรายละเอียด
               </a>
+              --}}
               <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-outline-primary" target="_blank">
                 <i class="bi bi-file-earmark-text me-2"></i>ดาวน์โหลดกำหนดการล่าสุด
               </a>

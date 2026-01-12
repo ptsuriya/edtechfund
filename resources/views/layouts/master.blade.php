@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="utf-8">
@@ -10,6 +10,41 @@
     <meta name="description" content="@yield('meta_description', 'แพลตฟอร์ม AI Gateway สำหรับครูและบุคลากรทางการศึกษา ร่วมกับ RBRU และ EdTech Fund')">
     <!-- คำสำคัญสำหรับ SEO -->
     <meta name="keywords" content="@yield('meta_keywords', 'RBRU, EdTech Fund, AI, AI Gateway, Teacher, การศึกษา, เทคโนโลยีการศึกษา')">
+    <meta name="robots" content="@yield('meta_robots', 'index,follow')">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+
+    <meta property="og:site_name" content="@yield('og_site_name', 'RBRU X Edtech Fund AI Gateway')">
+    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('title', 'RBRU X Edtech Fund AI Gateway')))">
+    <meta property="og:description" content="@yield('og_description', trim($__env->yieldContent('meta_description', 'แพลตฟอร์ม AI Gateway สำหรับครูและบุคลากรทางการศึกษา ร่วมกับ RBRU และ EdTech Fund')))">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="@yield('og_url', url()->current())">
+    <meta property="og:image" content="@yield('og_image', asset('img/logo.png'))">
+
+    <meta name="twitter:card" content="@yield('twitter_card', 'summary_large_image')">
+    <meta name="twitter:title" content="@yield('twitter_title', trim($__env->yieldContent('title', 'RBRU X Edtech Fund AI Gateway')))">
+    <meta name="twitter:description" content="@yield('twitter_description', trim($__env->yieldContent('meta_description', 'แพลตฟอร์ม AI Gateway สำหรับครูและบุคลากรทางการศึกษา ร่วมกับ RBRU และ EdTech Fund')))">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('img/logo.png'))">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "RBRU X Edtech Fund AI Gateway",
+            "url": "{{ url('/') }}"
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "RBRU X Edtech Fund AI Gateway",
+            "url": "{{ url('/') }}",
+            "logo": "{{ asset('img/logo.png') }}"
+        }
+    </script>
+
+    @stack('json_ld')
 
 
 

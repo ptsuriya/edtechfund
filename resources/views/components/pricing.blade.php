@@ -21,11 +21,10 @@
                             <div class="col-md-6">
                                 <h5 class="fw-bold text-secondary border-bottom pb-2 mb-3">หัวข้อการอบรม</h5>
                                 <ul class="list-unstyled mb-4">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>แนะนำกรอบสมรรถนะ AI Competency</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Foundations & Human-centered Mindset</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ethics of AI in Education</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Pedagogy และการประเมิน</li>
-                                    <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การออกแบบแผนการสอนด้วย Generative AI</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การออกแบบกิจกรรมการเรียนรู้ที่เน้นผู้เรียนเป็นสำคัญด้วย Generative AI</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การใช้ Generative AI เพื่อการวิจัยในชั้นเรียนอย่างมีจริยธรรม</li>
+                                    <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>การใช้ Generative AI เพื่อลดภาระงานที่ไม่ใช่งานสอน</li>
                                 </ul>
 
                                 <div class="bg-light p-3 rounded">
@@ -39,7 +38,7 @@
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2"><i class="bi bi-person-fill text-primary me-2"></i>อาจารย์ ดร.อภิชาติ อนุกูลเวช</li>
                                     <li class="mb-2"><i class="bi bi-person-fill text-primary me-2"></i>อาจารย์ ดร.พีรญา สุขขีวรรณ</li>
-                                    <li class="mb-0"><i class="bi bi-person-fill text-primary me-2"></i>คุณ ปัญจพัฒน์ เกรียงวีระยุทธ</li>
+                                    <li class="mb-0"><i class="bi bi-person-fill text-primary me-2"></i>คุณปัญจพัฒน์ เกรียงวีระยุทธ</li>
                                 </ul>
 
                                 <div class="bg-light p-3 rounded mb-3">

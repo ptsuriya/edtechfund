@@ -20,22 +20,25 @@
                             <div class="col-md-8">
                                 <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3" data-aos="fade-right">หัวข้อการอบรม</h3>
                                 <ul class="list-unstyled" data-aos="fade-right" data-aos-delay="100">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>แนะนำกรอบสมรรถนะ AI Competency</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Foundations & Human-centered Mindset</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ethics of AI in Education</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI Pedagogy: การใช้ AI ในการสอนและการประเมิน</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>AI for Professional Development สรุปและวางแผน</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การออกแบบแผนการสอนด้วย Generative AI</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การออกแบบกิจกรรมการเรียนรู้ที่เน้นผู้เรียนเป็นสำคัญด้วย Generative AI</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การใช้ Generative AI เพื่อการวิจัยในชั้นเรียนอย่างมีจริยธรรม</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การใช้ Generative AI เพื่อลดภาระงานที่ไม่ใช่งานสอน</li>
                                 </ul>
 
                                 <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3 mt-4" data-aos="fade-left">วิทยากร</h3>
                                 <div class="row mt-4">
-                                    <div class="col-md-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
-                                        <img src="{{ asset('img/aphichat.jpg') }}" alt="อาจารย์ ดร.อภิชาติ อนุกูลเวช" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold">อาจารย์ ดร.อภิชาติ อนุกูลเวช</h5>
+                                    <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
+                                        <img src="{{ asset('img/sirinuch.jpg') }}" alt="อาจารย์ ดร.ศิรินุช ศรารัชต์" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
+                                        <h5 class="fw-bold">อาจารย์ ดร.ศิรินุช ศรารัชต์</h5>
                                     </div>
-                                    <div class="col-md-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
                                         <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขขีวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
                                         <h5 class="fw-bold">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
+                                    </div>
+                                    <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="300">
+                                        <img src="{{ asset('img/Punjapath.jpg') }}" alt="คุณปัญจพัฒน์ เกรียงวีระยุทธ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
+                                        <h5 class="fw-bold">คุณปัญจพัฒน์ เกรียงวีระยุทธ</h5>
                                     </div>
                                 </div>
 
@@ -61,6 +64,7 @@
                             </div>
                         </div>
 
+                        {{--
                         <div class="text-center mb-5" data-aos="fade-up">
                             <h3 class="fw-bold mb-4">ลงทะเบียนและตรวจสอบรายชื่อ</h3>
                             <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -73,6 +77,7 @@
                             </div>
 
                         </div>
+                        --}}
 
                         <hr>
 
@@ -84,7 +89,7 @@
                         </div>
 
                         <div class="text-center" data-aos="fade-up">
-                            <img src="{{ asset('img/S__2375702.jpg') }}" alt="Poster" class="img-fluid rounded shadow" style="max-height: 800px;">
+                            <img src="{{ asset('img/NewPoster.jpg') }}" alt="Poster" class="img-fluid rounded shadow" style="max-height: 800px;">
                         </div>
 
                     </div>

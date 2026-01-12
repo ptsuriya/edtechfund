@@ -5,4 +5,5 @@
 
 @section('content')
 @include('components.headbanner')
+@include('components.faq')
 @endsection

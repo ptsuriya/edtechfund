@@ -3,6 +3,51 @@
 @section('title', 'RBRU X Edtech Fund AI Gateway')
 @section('meta_description', 'Welcome to our website.')
 
+@push('json_ld')
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "เอกสารแนบโครงการ",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "CreativeWork",
+                        "name": "รายงานความก้าวหน้าและการเบิกจ่ายงวดที่ 1",
+                        "url": "{{ asset('files/อว0631.09-0796-ส่งงวด-1.pdf') }}",
+                        "fileFormat": "application/pdf",
+                        "inLanguage": "th-TH"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "CreativeWork",
+                        "name": "รายละเอียดกิจกรรม แผนการใช้จ่าย และงบประมาณ",
+                        "url": "{{ asset('files/แผนปฏิบัติการและแผนการใช้จ่ายเงินโครงการ.pdf') }}",
+                        "fileFormat": "application/pdf",
+                        "inLanguage": "th-TH"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "CreativeWork",
+                        "name": "กำหนดการโครงการ",
+                        "url": "{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}",
+                        "fileFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                        "inLanguage": "th-TH"
+                    }
+                }
+            ]
+        }
+    </script>
+@endpush
+
 @section('content')
     @include('components.headbanner')
     <!-- Attachments Section -->
