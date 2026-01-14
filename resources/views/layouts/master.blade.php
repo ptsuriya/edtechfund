@@ -66,6 +66,7 @@
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="{{ asset('template/assets/css/main.css') }}" rel="stylesheet">
+    @stack('styles')
 
 </head>
 
@@ -104,6 +105,37 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    @stack('scripts')
+    <script>
+        (function () {
+            const apiUrl = 'https://script.google.com/macros/s/AKfycbwI8eTmkqHiBECddU6eWgthq9wOUKGP6MJErshlBvZwGKqs4rt1EUSyviHH85jKkPKl/exec?path=API&action=read';
+            const cacheKey = 'registerNameCache_v2';
+            const cacheTtlMs = 5 * 60 * 1000;
+
+            try {
+                const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
+                if (cached && Date.now() - cached.timestamp < cacheTtlMs) {
+                    return;
+                }
+            } catch (error) {
+                sessionStorage.removeItem(cacheKey);
+            }
+
+            fetch(apiUrl, { cache: 'no-store' })
+                .then((response) => response.ok ? response.json() : null)
+                .then((payload) => {
+                    const data = Array.isArray(payload?.data) ? payload.data : (Array.isArray(payload) ? payload : null);
+                    if (!data) {
+                        return;
+                    }
+                    sessionStorage.setItem(cacheKey, JSON.stringify({
+                        timestamp: Date.now(),
+                        data
+                    }));
+                })
+                .catch(() => {});
+        })();
     </script>
 
 </body>

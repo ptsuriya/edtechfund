@@ -15,8 +15,8 @@
       "startDate": "2026-01-27",
       "location": {
         "@type": "Place",
-        "name": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307",
-        "address": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307"
+        "name": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้องอบรม 35201 และ ห้องปฏิบัติการคอมพิวเตอร์ 35307",
+        "address": "มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้องอบรม 35201 และ ห้องปฏิบัติการคอมพิวเตอร์ 35307"
       },
       "organizer": {
         "@type": "Organization",
@@ -410,7 +410,7 @@
                 <span class="badge bg-info text-white fs-6 px-3 py-2 rounded-pill">เปิดรับ 100 ท่าน</span>
                 <span class="text-primary fw-bold"><i class="bi bi-calendar-event me-1"></i>27 ม.ค. 2569</span>
               </div>
-              <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้อง 35307</p>
+              <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35 ห้องอบรม 35201 และ ห้องปฏิบัติการคอมพิวเตอร์ 35307</p>
               <p class="mb-3 text-muted"><small>เปิดรับสมัครถึง 19 มกราคม 2569</small></p>
               <h6 class="fw-bold text-secondary">หัวข้อเด่น</h6>
               <ul class="list-unstyled mb-4">
@@ -421,16 +421,24 @@
               </ul>
             </div>
             <div class="d-grid gap-2">
-              {{--
-              <a href="{{ route('register') }}" class="btn btn-primary">
-                <i class="bi bi-pencil-square me-2"></i>อ่านรายละเอียด
+              <a href="{{ route('register_name') }}" class="btn btn-primary">
+                <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อผู้สมัคร
               </a>
-              --}}
               <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-outline-primary" target="_blank">
                 <i class="bi bi-file-earmark-text me-2"></i>ดาวน์โหลดกำหนดการล่าสุด
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mt-4">
+      <div class="col-lg-6">
+        <img src="{{ asset('img/35Building.webp') }}" alt="อาคาร 35 มหาวิทยาลัยราชภัฏรำไพพรรณี" class="img-fluid rounded shadow-sm">
+      </div>
+      <div class="col-lg-6">
+        <div class="ratio ratio-4x3 h-100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8751.914369538585!2d102.10126208392838!3d12.657199860058276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310483ec067cb9b5%3A0xa4f9f3c819cd4986!2z4Lit4Liy4LiE4Liy4Lij4LmA4LiJ4Lil4Li04Lih4Lie4Lij4Liw4LmA4LiB4Li14Lii4Lij4LiV4Li04LivIOC4leC4tuC4gSAzNQ!5e1!3m2!1sth!2sth!4v1768280147282!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

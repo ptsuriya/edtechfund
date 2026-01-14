@@ -13,7 +13,10 @@
                         <div class="text-center mb-5" data-aos="fade-down">
                             <h1 class="fw-bold text-primary mb-3">ขอเชิญชวนเข้าร่วม</h1>
                             <h2 class="h4 mb-4">โครงการต้นแบบแพลตฟอร์มและบริหารจัดการ การใช้ Generative AI <br>และการเสริมสร้างสมรรถนะบุคลากร เพื่อยกระดับการบริหารภาครัฐดิจิทัล <br>และความมั่นคงปลอดภัยของข้อมูลในสถานศึกษา</h2>
-                            <span class="badge bg-info text-white fs-5 px-4 py-2 rounded-pill">เปิดรับ 100 ท่านเท่านั้น</span>
+                            <a href="{{ route('register_name') }}" class="btn btn-lg px-5 text-white"
+                                style="background: linear-gradient(135deg, #ff4d4d, #ff9f1a); box-shadow: 0 10px 24px rgba(255, 77, 77, 0.35);">
+                                <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อผู้สมัคร
+                            </a>
                         </div>
 
                         <div class="row mb-5 justify-content-center">
@@ -30,15 +33,15 @@
                                 <div class="row mt-4">
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
                                         <img src="{{ asset('img/sirinuch.jpg') }}" alt="อาจารย์ ดร.ศิรินุช ศรารัชต์" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold">อาจารย์ ดร.ศิรินุช ศรารัชต์</h5>
+                                        <h5 class="fw-bold text-nowrap">อาจารย์ ดร.ศิรินุช ศรารัชต์</h5>
                                     </div>
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
                                         <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขขีวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
+                                        <h5 class="fw-bold text-nowrap">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
                                     </div>
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="300">
                                         <img src="{{ asset('img/Punjapath.jpg') }}" alt="คุณปัญจพัฒน์ เกรียงวีระยุทธ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold">คุณปัญจพัฒน์ เกรียงวีระยุทธ</h5>
+                                        <h5 class="fw-bold text-nowrap">คุณปัญจพัฒน์ เกรียงวีระยุทธ</h5>
                                     </div>
                                 </div>
 
@@ -59,9 +62,24 @@
                             </div>
                             <div class="col-md-6">
                                 <h4 class="fw-bold text-primary"><i class="bi bi-geo-alt me-2"></i>สถานที่</h4>
-                                <p class="fs-5 mb-0">ณ มหาวิทยาลัยราชภัฏรำไพพรรณี</p>
-                                <p class="mb-0">ตึก 35 ห้อง 35307</p>
+                                <p class="fs-5 mb-0">มหาวิทยาลัยราชภัฏรำไพพรรณี ตึก 35</p>
+                                <p class="mb-0">ห้องอบรม 35201 และ ห้องปฏิบัติการคอมพิวเตอร์ 35307</p>
                             </div>
+                        </div>
+
+                        <div class="row g-3 mb-5" data-aos="fade-up">
+                            <div class="col-md-6">
+                                <img src="{{ asset('img/35Building.webp') }}" alt="อาคาร 35 มหาวิทยาลัยราชภัฏรำไพพรรณี" class="img-fluid rounded shadow-sm">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ratio ratio-4x3 h-100">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8751.914369538585!2d102.10126208392838!3d12.657199860058276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310483ec067cb9b5%3A0xa4f9f3c819cd4986!2z4Lit4Liy4LiE4Liy4Lij4LmA4LiJ4Lil4Li04Lih4Lie4Lij4Liw4LmA4LiB4Li14Lii4Lij4LiV4Li04LivIOC4leC4tuC4gSAzNQ!5e1!3m2!1sth!2sth!4v1768280147282!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-5" data-aos="fade-up">
+                            <span class="badge bg-info text-white fs-5 px-4 py-2 rounded-pill">เปิดรับ 100 ท่านเท่านั้น</span>
                         </div>
 
                         {{--
