@@ -26,6 +26,7 @@
                         placeholder="พิมพ์ชื่อ โรงเรียน หรือเขต">
                 </div>
             </div>
+            <div class="text-muted small d-md-none mb-3">เลื่อนซ้าย-ขวาเพื่อดูตารางทั้งหมด</div>
 
             @php
                 $visibleHeaders = $headers ?: ['ลำดับ', 'ชื่อ', 'โรงเรียน', 'เขต'];
@@ -66,8 +67,9 @@
 <style>
     .participants-table th,
     .participants-table td {
-        white-space: normal;
-        word-break: break-word;
+        white-space: nowrap !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 
     .participants-table .row-index {
@@ -80,41 +82,14 @@
         user-select: none;
     }
 
-    @media (max-width: 575px) {
-        .participants-table thead {
-            display: none;
-        }
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        .participants-table tbody tr {
-            display: grid;
-            grid-template-columns: 64px 1fr;
-            border: 1px solid #dee2e6;
-            border-radius: 0.5rem;
-            margin-bottom: 0.75rem;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .participants-table tbody td {
-            border: none;
-            padding: 0.25rem 0;
-        }
-
-        .participants-table tbody td.row-index {
-            grid-row: 1 / span 3;
-            align-self: center;
-        }
-
-        .participants-table tbody td:not(.row-index) {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .participants-table tbody td:not(.row-index)::before {
-            content: attr(data-label);
-            font-weight: 600;
-            color: #1f4ea5;
-            min-width: 110px;
-        }
+    .participants-table {
+        min-width: 920px;
+        table-layout: auto;
     }
 </style>
 @endpush

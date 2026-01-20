@@ -18,7 +18,7 @@
                             <div class="w-100 w-md-auto">
                                 <label for="register-search" class="form-label mb-1">ค้นหารายชื่อ</label>
                                 <input id="register-search" type="text" class="form-control"
-                                    placeholder="ค้นหาจากชื่อ หรือสถานศึกษา">
+                                    placeholder="ค้นหาจากชื่อ">
                             </div>
                         </div>
 
@@ -30,11 +30,11 @@
                                             ลำดับ <i class="bi bi-arrow-down-up ms-1"></i>
                                         </th>
                                         <th class="sortable-head" data-sort-key="name" role="button" tabindex="0">
-                                            ชื่อ-นามสกุล <i class="bi bi-arrow-down-up ms-1"></i>
+                                            ชื่อ <i class="bi bi-arrow-down-up ms-1"></i>
                                         </th>
-                                        <th class="sortable-head" data-sort-key="work" role="button" tabindex="0">
-                                            สถานศึกษา/หน่วยงาน <i class="bi bi-arrow-down-up ms-1"></i>
-                                        </th>
+                                        <th>PLC1</th>
+                                        <th>PLC2</th>
+                                        <th>PLC3</th>
                                         <th>สถานะ</th>
                                     </tr>
                                 </thead>
@@ -65,52 +65,18 @@
         user-select: none;
     }
 
-    @media (max-width: 425px) {
-        .index-col {
-            width: 72px;
-        }
+    .register-name-page .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        .table th,
-        .table td {
-            padding: 0.5rem;
-            font-size: 0.9rem;
-        }
+    .register-name-page table {
+        min-width: 720px;
+    }
 
-        .table thead {
-            display: none;
-        }
-
-        .table tbody tr {
-            display: grid;
-            grid-template-columns: 56px 1fr;
-            border: 1px solid #dee2e6;
-            border-radius: 0.5rem;
-            margin-bottom: 0.75rem;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .table tbody td {
-            border: none;
-            padding: 0.25rem 0;
-        }
-
-        .table tbody td.row-index {
-            grid-row: 1 / span 2;
-            align-self: center;
-            font-weight: 600;
-        }
-
-        .table tbody td:not(.row-index) {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .table tbody td:not(.row-index)::before {
-            content: attr(data-label);
-            font-weight: 600;
-            color: #1f4ea5;
-            min-width: 120px;
-        }
+    .register-name-page .table th,
+    .register-name-page .table td {
+        white-space: nowrap;
     }
 </style>
 @endpush
@@ -118,12 +84,12 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const apiUrl = 'https://script.google.com/macros/s/AKfycbwI8eTmkqHiBECddU6eWgthq9wOUKGP6MJErshlBvZwGKqs4rt1EUSyviHH85jKkPKl/exec?path=API&action=read';
+        const apiUrl = 'https://script.google.com/macros/s/AKfycbwjvpSTxxBE3gBp2yAQhAGvkbSJ2O3gokaX0SQ6NWhv_LXvfon6CiKIoY4YWvDGCAq-9g/exec?action=read&path=API';
         const tableBody = document.getElementById('register-table-body');
         const searchInput = document.getElementById('register-search');
         const countEl = document.getElementById('register-count');
         const statusEl = document.getElementById('register-status');
-        const cacheKey = 'registerNameCache_v2';
+        const cacheKey = 'registerNameCache_v3';
         const cacheTtlMs = 5 * 60 * 1000;
         let allRows = [];
         let sortKey = 'index';
@@ -140,7 +106,9 @@
                 row.innerHTML = `
                     <td><span class="placeholder col-4"></span></td>
                     <td><span class="placeholder col-8"></span></td>
-                    <td><span class="placeholder col-9"></span></td>
+                    <td><span class="placeholder col-6"></span></td>
+                    <td><span class="placeholder col-6"></span></td>
+                    <td><span class="placeholder col-6"></span></td>
                     <td><span class="placeholder col-6"></span></td>
                 `;
                 tableBody.appendChild(row);
@@ -153,7 +121,7 @@
             if (!rows.length) {
                 const emptyRow = document.createElement('tr');
                 const emptyCell = document.createElement('td');
-                emptyCell.colSpan = 4;
+                emptyCell.colSpan = 6;
                 emptyCell.className = 'text-center text-muted py-4';
                 emptyCell.textContent = 'ไม่พบข้อมูลที่ค้นหา';
                 emptyRow.appendChild(emptyCell);
@@ -163,9 +131,9 @@
             }
 
             rows.forEach((item, index) => {
-                const plcValues = [item.PLC1, item.PLC2, item.PLC3].map((value) => (value || '').trim());
-                const hasAllPlc = plcValues.every((value) => value !== '');
-                const downloadLink = (item.Download || '').trim();
+                const plcValues = [item.PLC1, item.PLC2, item.PLC3].map((value) => String(value ?? '').trim());
+                const hasAllPlc = plcValues.every((value) => value === '1');
+                const certificateLink = (item.Certificate || '').trim();
                 const row = document.createElement('tr');
                 const indexCell = document.createElement('td');
                 indexCell.textContent = index + 1;
@@ -174,36 +142,31 @@
                 const nameCell = document.createElement('td');
                 nameCell.textContent = item.Name || '-';
                 nameCell.setAttribute('data-label', 'ชื่อ');
-                const workCell = document.createElement('td');
-                workCell.textContent = item.WorkStation || '-';
-                workCell.setAttribute('data-label', 'สถานศึกษา/หน่วยงาน');
+                const plcCells = plcValues.map((value, plcIndex) => {
+                    const cell = document.createElement('td');
+                    const label = `PLC${plcIndex + 1}`;
+                    cell.setAttribute('data-label', label);
+                    cell.textContent = value === '1' ? 'ส่งแล้ว' : 'ยังไม่ได้ส่ง';
+                    return cell;
+                });
                 const statusCell = document.createElement('td');
                 statusCell.setAttribute('data-label', 'สถานะ');
                 if (!hasAllPlc) {
-                    const link = document.createElement('a');
-                    link.href = 'https://forms.gle/26ETVb7RZKnhJq6JA';
-                    link.target = '_blank';
-                    link.rel = 'noopener';
-                    link.className = 'btn btn-sm btn-primary';
-                    link.textContent = 'บันทึกข้อมูล PLC';
-                    statusCell.appendChild(link);
-                } else if (!downloadLink) {
-                    const badge = document.createElement('span');
-                    badge.className = 'badge bg-warning text-dark';
-                    badge.textContent = 'กำลังจัดทำใบประกาศ';
-                    statusCell.appendChild(badge);
+                    statusCell.textContent = 'ยังส่ง PLC ไม่ครบ';
+                } else if (!certificateLink) {
+                    statusCell.textContent = 'กำลังเตรียมใบประกาศ';
                 } else {
                     const link = document.createElement('a');
-                    link.href = downloadLink;
+                    link.href = certificateLink;
                     link.target = '_blank';
                     link.rel = 'noopener';
-                    link.className = 'btn btn-sm btn-success';
-                    link.textContent = 'รับใบประกาศ';
+                    link.className = 'text-decoration-none';
+                    link.textContent = 'ดาวน์โหลดใบประกาศได้';
                     statusCell.appendChild(link);
                 }
                 row.appendChild(indexCell);
                 row.appendChild(nameCell);
-                row.appendChild(workCell);
+                plcCells.forEach((cell) => row.appendChild(cell));
                 row.appendChild(statusCell);
                 tableBody.appendChild(row);
             });
@@ -216,23 +179,21 @@
             const filtered = allRows
                 .filter((item) => {
                     const name = (item.Name || '').trim();
-                    const work = (item.WorkStation || '').trim();
-                    return name !== '' || work !== '';
+                    return name !== '';
                 })
                 .filter((item) => {
                     if (!keyword) {
                         return true;
                     }
                     const name = (item.Name || '').toLowerCase();
-                    const work = (item.WorkStation || '').toLowerCase();
-                    return name.includes(keyword) || work.includes(keyword);
+                    return name.includes(keyword);
                 });
             const sorted = [...filtered].sort((a, b) => {
                 if (sortKey === 'index') {
                     return 0;
                 }
-                const valueA = sortKey === 'name' ? (a.Name || '') : (a.WorkStation || '');
-                const valueB = sortKey === 'name' ? (b.Name || '') : (b.WorkStation || '');
+                const valueA = (a.Name || '');
+                const valueB = (b.Name || '');
                 const result = valueA.localeCompare(valueB, 'th', { sensitivity: 'base' });
                 return sortDirection === 'asc' ? result : -result;
             });
@@ -270,7 +231,7 @@
                 tableBody.innerHTML = '';
                 const errorRow = document.createElement('tr');
                 const errorCell = document.createElement('td');
-                errorCell.colSpan = 4;
+                errorCell.colSpan = 6;
                 errorCell.className = 'text-center text-danger py-4';
                 errorCell.textContent = 'ไม่สามารถโหลดข้อมูลได้ โปรดลองใหม่ภายหลัง';
                 errorRow.appendChild(errorCell);

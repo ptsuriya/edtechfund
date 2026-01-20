@@ -36,7 +36,7 @@
                                     <div>
                                         <h5 class="mb-1">การออกแบบแผนการสอนด้วย Generative AI</h5>
                                         <p class="mb-1 text-muted">ออกแบบแผนการสอนใหม่ 1 หน่วย ที่มี AI เป็นผู้ช่วยสอนหรือผู้ช่วยตรวจ</p>
-                                        <p class="mb-0"><small class="text-muted">กิจกรรม: เขียนแผนการสอน T-pack Model สอดคล้องกับท้องถิ่น | วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช</small></p>
+                                        <p class="mb-0"><small class="text-muted">กิจกรรม: เขียนแผนการสอน T-pack Model สอดคล้องกับท้องถิ่น | วิทยากร: อาจารย์ ดร.ศิรินุช ศรารัชต์</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                     <div>
                                         <h5 class="mb-1">การออกแบบกิจกรรมการเรียนรู้ด้วย Generative AI</h5>
                                         <p class="mb-1 text-muted">ออกแบบกิจกรรมการเรียนรู้ที่เน้นผู้เรียนเป็นสำคัญ พร้อมสร้างสื่อ/แบบทดสอบหลายระดับ</p>
-                                        <p class="mb-0"><small class="text-muted">วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช, อ.ดร.พีรญา สุขขีวรรณ</small></p>
+                                        <p class="mb-0"><small class="text-muted">วิทยากร: อ.ดร.พีรญา สุขขีวรรณ</small></p>
                                     </div>
                                 </div>
                             </div>

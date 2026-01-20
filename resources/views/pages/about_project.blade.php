@@ -370,14 +370,14 @@
                 <div class="me-3 fw-bold text-primary">09:00-10:30</div>
                 <div>
                   <div class="fw-semibold">การออกแบบแผนการสอนด้วย Generative AI</div>
-                  <small class="text-muted d-block">กิจกรรม: เขียนแผนการสอน T-pack | วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช</small>
+                  <small class="text-muted d-block">กิจกรรม: เขียนแผนการสอน T-pack | วิทยากร: อาจารย์ ดร.ศิรินุช ศรารัชต์</small>
                 </div>
               </div>
               <div class="mb-3 d-flex">
                 <div class="me-3 fw-bold text-primary">10:30-12:00</div>
                 <div>
                   <div class="fw-semibold">การออกแบบกิจกรรมการเรียนรู้ด้วย Generative AI</div>
-                  <small class="text-muted d-block">วิทยากร: อ.ดร.อภิชาติ อนุกูลเวช, อ.ดร.พีรญา สุขขีวรรณ</small>
+                  <small class="text-muted d-block">วิทยากร: อ.ดร.พีรญา สุขขีวรรณ</small>
                 </div>
               </div>
               <div class="mb-3 d-flex">
