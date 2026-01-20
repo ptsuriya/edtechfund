@@ -44,6 +44,7 @@
                   </ul>
                 </li> --}}
                 <li><a href="{{ route('about_reserchers') }}">เกี่ยวกับผู้วิจัย</a></li>
+                <li><a href="{{ route('about_participants') }}">สรุปรายชื่อผู้เข้าร่วมวิจัย</a></li>
                 <li><a href="{{ route('about_document') }}">เอกสารที่เกี่ยวข้อง</a></li>
               </ul>
             </li>

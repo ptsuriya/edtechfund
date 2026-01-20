@@ -13,10 +13,16 @@
                         <div class="text-center mb-5" data-aos="fade-down">
                             <h1 class="fw-bold text-primary mb-3">ขอเชิญชวนเข้าร่วม</h1>
                             <h2 class="h4 mb-4">โครงการต้นแบบแพลตฟอร์มและบริหารจัดการ การใช้ Generative AI <br>และการเสริมสร้างสมรรถนะบุคลากร เพื่อยกระดับการบริหารภาครัฐดิจิทัล <br>และความมั่นคงปลอดภัยของข้อมูลในสถานศึกษา</h2>
-                            <a href="{{ route('register_name') }}" class="btn btn-lg px-5 text-white"
+
+                            <a href="{{ route('about_participants') }}" class="btn btn-lg px-5 text-white"
+                                style="background: linear-gradient(135deg, #ff4d4d, #ff9f1a); box-shadow: 0 10px 24px rgba(255, 77, 77, 0.35);">
+                                <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อผู้เข้าร่วมอบรม
+                            </a>
+
+                            <!-- <a href="{{ route('register_name') }}" class="btn btn-lg px-5 text-white"
                                 style="background: linear-gradient(135deg, #ff4d4d, #ff9f1a); box-shadow: 0 10px 24px rgba(255, 77, 77, 0.35);">
                                 <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อผู้สมัคร
-                            </a>
+                            </a> -->
                         </div>
 
                         <div class="row mb-5 justify-content-center">
