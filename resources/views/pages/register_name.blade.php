@@ -34,7 +34,6 @@
                                         </th>
                                         <th>PLC1</th>
                                         <th>PLC2</th>
-                                        <th>PLC3</th>
                                         <th>สถานะ</th>
                                     </tr>
                                 </thead>
@@ -71,7 +70,7 @@
     }
 
     .register-name-page table {
-        min-width: 720px;
+        min-width: 640px;
     }
 
     .register-name-page .table th,
@@ -109,7 +108,6 @@
                     <td><span class="placeholder col-6"></span></td>
                     <td><span class="placeholder col-6"></span></td>
                     <td><span class="placeholder col-6"></span></td>
-                    <td><span class="placeholder col-6"></span></td>
                 `;
                 tableBody.appendChild(row);
             }
@@ -121,7 +119,7 @@
             if (!rows.length) {
                 const emptyRow = document.createElement('tr');
                 const emptyCell = document.createElement('td');
-                emptyCell.colSpan = 6;
+                emptyCell.colSpan = 5;
                 emptyCell.className = 'text-center text-muted py-4';
                 emptyCell.textContent = 'ไม่พบข้อมูลที่ค้นหา';
                 emptyRow.appendChild(emptyCell);
@@ -131,7 +129,7 @@
             }
 
             rows.forEach((item, index) => {
-                const plcValues = [item.PLC1, item.PLC2, item.PLC3].map((value) => String(value ?? '').trim());
+                const plcValues = [item.PLC1, item.PLC2].map((value) => String(value ?? '').trim());
                 const hasAllPlc = plcValues.every((value) => value === '1');
                 const certificateLink = (item.Certificate || '').trim();
                 const row = document.createElement('tr');
@@ -144,7 +142,7 @@
                 nameCell.setAttribute('data-label', 'ชื่อ');
                 const plcCells = plcValues.map((value, plcIndex) => {
                     const cell = document.createElement('td');
-                    const label = `PLC${plcIndex + 1}`;
+                const label = `PLC${plcIndex + 1}`;
                     cell.setAttribute('data-label', label);
                     cell.textContent = value === '1' ? 'ส่งแล้ว' : 'ยังไม่ได้ส่ง';
                     return cell;
@@ -231,7 +229,7 @@
                 tableBody.innerHTML = '';
                 const errorRow = document.createElement('tr');
                 const errorCell = document.createElement('td');
-                errorCell.colSpan = 6;
+                errorCell.colSpan = 5;
                 errorCell.className = 'text-center text-danger py-4';
                 errorCell.textContent = 'ไม่สามารถโหลดข้อมูลได้ โปรดลองใหม่ภายหลัง';
                 errorRow.appendChild(errorCell);

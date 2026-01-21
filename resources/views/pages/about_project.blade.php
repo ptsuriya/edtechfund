@@ -355,49 +355,7 @@
           <div class="card-body p-4">
             <h5 class="fw-bold text-primary mb-3">ตารางกำหนดการ (อัปเดตจาก “กำหนดการ Ver.2_4 Modules.docx”)</h5>
             <div class="timeline">
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">08:00-08:30</div>
-                <div>
-                  <div class="fw-semibold">ลงทะเบียนและเตรียมความพร้อม</div>
-                  <small class="text-muted">ลงทะเบียน ตรวจสอบอุปกรณ์และอินเทอร์เน็ต</small>
-                </div>
-              </div>
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">08:30-09:00</div>
-                <div class="fw-semibold">พิธีเปิดโครงการ</div>
-              </div>
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">09:00-10:30</div>
-                <div>
-                  <div class="fw-semibold">การออกแบบแผนการสอนด้วย Generative AI</div>
-                  <small class="text-muted d-block">กิจกรรม: เขียนแผนการสอน T-pack | วิทยากร: อาจารย์ ดร.ศิรินุช ศรารัชต์</small>
-                </div>
-              </div>
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">10:30-12:00</div>
-                <div>
-                  <div class="fw-semibold">การออกแบบกิจกรรมการเรียนรู้ด้วย Generative AI</div>
-                  <small class="text-muted d-block">วิทยากร: อ.ดร.พีรญา สุขขีวรรณ</small>
-                </div>
-              </div>
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">12:00-13:00</div>
-                <div class="fw-semibold">พักรับประทานอาหาร</div>
-              </div>
-              <div class="mb-3 d-flex">
-                <div class="me-3 fw-bold text-primary">13:00-14:30</div>
-                <div>
-                  <div class="fw-semibold">การใช้ Generative AI เพื่อการวิจัยในชั้นเรียนอย่างมีจริยธรรม</div>
-                  <small class="text-muted d-block">วิทยากร: อ.ดร.พีรญา สุขขีวรรณ, คุณปัญจพัฒน์ เกรียงวีระยุทธ</small>
-                </div>
-              </div>
-              <div class="d-flex">
-                <div class="me-3 fw-bold text-primary">14:30-16:00</div>
-                <div>
-                  <div class="fw-semibold">การใช้ Generative AI เพื่อลดภาระงานที่ไม่ใช่งานสอน</div>
-                  <small class="text-muted d-block">วิทยากร: คุณปัญจพัฒน์ เกรียงวีระยุทธ</small>
-                </div>
-              </div>
+              @include('components.schedule-timeline')
             </div>
           </div>
         </div>

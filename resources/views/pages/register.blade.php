@@ -3,6 +3,18 @@
 @section('title', 'รับสมัครเข้าโครงการ')
 @section('meta_description', 'รับสมัครเข้าโครงการต้นแบบแพลตฟอร์มและบริหารจัดการ การใช้ Generative AI')
 
+@push('styles')
+    <style>
+        .speaker-name {
+            white-space: nowrap;
+            display: inline-block;
+            font-size: 1.05rem;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+    </style>
+@endpush
+
 @section('content')
 @include('components.headbanner')
     <section class="container py-5">
@@ -26,7 +38,7 @@
                         </div>
 
                         <div class="row mb-5 justify-content-center">
-                            <div class="col-md-8">
+                            <div class="col-12 col-lg-10">
                                 <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3" data-aos="fade-right">หัวข้อการอบรม</h3>
                                 <ul class="list-unstyled" data-aos="fade-right" data-aos-delay="100">
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>การออกแบบแผนการสอนด้วย Generative AI</li>
@@ -36,18 +48,18 @@
                                 </ul>
 
                                 <h3 class="h5 fw-bold text-secondary border-bottom pb-2 mb-3 mt-4" data-aos="fade-left">วิทยากร</h3>
-                                <div class="row mt-4">
+                                <div class="row mt-4 g-4 justify-content-center">
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
                                         <img src="{{ asset('img/sirinuch.jpg') }}" alt="อาจารย์ ดร.ศิรินุช ศรารัชต์" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold text-nowrap">อาจารย์ ดร.ศิรินุช ศรารัชต์</h5>
+                                        <h5 class="fw-bold speaker-name">อาจารย์ ดร.ศิรินุช ศรารัชต์</h5>
                                     </div>
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
                                         <img src="{{ asset('img/peraya.jpg') }}" alt="อาจารย์ ดร.พีรญา สุขขีวรรณ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold text-nowrap">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
+                                        <h5 class="fw-bold speaker-name">อาจารย์ ดร.พีรญา สุขขีวรรณ</h5>
                                     </div>
                                     <div class="col-md-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="300">
                                         <img src="{{ asset('img/Punjapath.jpg') }}" alt="คุณปัญจพัฒน์ เกรียงวีระยุทธ" class="rounded shadow-sm mb-3" style="width: 200px; height: 300px; object-fit: cover; object-position: top center;">
-                                        <h5 class="fw-bold text-nowrap">คุณปัญจพัฒน์ เกรียงวีระยุทธ</h5>
+                                        <h5 class="fw-bold speaker-name">คุณปัญจพัฒน์ เกรียงวีระยุทธ</h5>
                                     </div>
                                 </div>
 
@@ -55,7 +67,7 @@
                                 <ol class="ps-3" data-aos="fade-up" data-aos-delay="100">
                                     <li class="mb-2">มีทักษะการใช้คอมพิวเตอร์เพื่อการทำงาน</li>
                                     <li class="mb-2">มีประสบการณ์ในการใช้แอพพลิเคชั่น</li>
-                                    <li class="mb-2">สามารถเข้าร่วม PLC ผ่านออนไลน์เพื่อติดตามผล (จำนวน 3 ครั้ง)</li>
+                                    <li class="mb-2">สามารถเข้าร่วม PLC ผ่านออนไลน์เพื่อติดตามผล (จำนวน 2 ครั้ง)</li>
                                 </ol>
                             </div>
                         </div>

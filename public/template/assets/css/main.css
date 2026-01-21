@@ -1698,6 +1698,10 @@ section,
     color: var(--accent-color);
 }
 
+.faq .faq-container .faq-active h3:hover {
+    color: var(--contrast-color);
+}
+
 .faq .faq-container .faq-item .faq-content {
     display: grid;
     grid-template-rows: 0fr;
@@ -1744,7 +1748,11 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
     transform: rotate(90deg);
-    color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.faq .faq-container .faq-active .faq-toggle:hover {
+    color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
@@ -2160,5 +2168,4 @@ section,
     object-fit: cover;
     object-position: center;
 }
-
 
