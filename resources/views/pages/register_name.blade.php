@@ -34,7 +34,9 @@
                                         </th>
                                         <th>PLC1</th>
                                         <th>PLC2</th>
-                                        <th>สถานะ</th>
+                                        <th class="d-none" data-col="certificate1">Certificate1</th>
+                                        <th class="d-none" data-col="showcase">Showcase</th>
+                                        <th class="d-none" data-col="certificate2">Certificate2</th>
                                     </tr>
                                 </thead>
                                 <tbody id="register-table-body"></tbody>
@@ -70,7 +72,7 @@
     }
 
     .register-name-page table {
-        min-width: 640px;
+        min-width: 980px;
     }
 
     .register-name-page .table th,
@@ -93,9 +95,38 @@
         let allRows = [];
         let sortKey = 'index';
         let sortDirection = 'asc';
+        let showCertificate1 = false;
+        let showShowcase = false;
+        let showCertificate2 = false;
 
         function setStatus(message) {
             statusEl.textContent = message;
+        }
+
+        function toggleColumnVisibility(column, isVisible) {
+            document.querySelectorAll(`[data-col="${column}"]`).forEach((el) => {
+                el.classList.toggle('d-none', !isVisible);
+            });
+        }
+
+        function getVisibleColumnCount() {
+            return 4
+                + (showCertificate1 ? 1 : 0)
+                + (showShowcase ? 1 : 0)
+                + (showCertificate2 ? 1 : 0);
+        }
+
+        function updateColumnVisibility() {
+            toggleColumnVisibility('certificate1', showCertificate1);
+            toggleColumnVisibility('showcase', showShowcase);
+            toggleColumnVisibility('certificate2', showCertificate2);
+        }
+
+        function computeColumnVisibility(rows) {
+            showCertificate1 = rows.some((item) => String(item?.Certificate1 ?? item?.Certificate ?? '').trim() !== '');
+            showShowcase = rows.some((item) => String(item?.Showcase ?? '').trim() !== '');
+            showCertificate2 = rows.some((item) => String(item?.Certificate2 ?? '').trim() !== '');
+            updateColumnVisibility();
         }
 
         function renderSkeleton() {
@@ -107,7 +138,9 @@
                     <td><span class="placeholder col-8"></span></td>
                     <td><span class="placeholder col-6"></span></td>
                     <td><span class="placeholder col-6"></span></td>
-                    <td><span class="placeholder col-6"></span></td>
+                    ${showCertificate1 ? '<td data-col="certificate1"><span class="placeholder col-7"></span></td>' : ''}
+                    ${showShowcase ? '<td data-col="showcase"><span class="placeholder col-7"></span></td>' : ''}
+                    ${showCertificate2 ? '<td data-col="certificate2"><span class="placeholder col-7"></span></td>' : ''}
                 `;
                 tableBody.appendChild(row);
             }
@@ -119,7 +152,7 @@
             if (!rows.length) {
                 const emptyRow = document.createElement('tr');
                 const emptyCell = document.createElement('td');
-                emptyCell.colSpan = 5;
+                emptyCell.colSpan = getVisibleColumnCount();
                 emptyCell.className = 'text-center text-muted py-4';
                 emptyCell.textContent = 'ไม่พบข้อมูลที่ค้นหา';
                 emptyRow.appendChild(emptyCell);
@@ -131,7 +164,9 @@
             rows.forEach((item, index) => {
                 const plcValues = [item.PLC1, item.PLC2].map((value) => String(value ?? '').trim());
                 const hasAllPlc = plcValues.every((value) => value === '1');
-                const certificateLink = (item.Certificate || '').trim();
+                const certificate1Link = normalizeUrl(item.Certificate1 || item.Certificate || '');
+                const certificate2Link = normalizeUrl(item.Certificate2 || '');
+                const showcaseValue = String(item.Showcase ?? '').trim();
                 const row = document.createElement('tr');
                 const indexCell = document.createElement('td');
                 indexCell.textContent = index + 1;
@@ -147,25 +182,53 @@
                     cell.textContent = value === '1' ? 'ส่งแล้ว' : 'ยังไม่ได้ส่ง';
                     return cell;
                 });
-                const statusCell = document.createElement('td');
-                statusCell.setAttribute('data-label', 'สถานะ');
+                const certificate1Cell = document.createElement('td');
+                certificate1Cell.setAttribute('data-label', 'Certificate1');
+                certificate1Cell.setAttribute('data-col', 'certificate1');
                 if (!hasAllPlc) {
-                    statusCell.textContent = 'ยังส่ง PLC ไม่ครบ';
-                } else if (!certificateLink) {
-                    statusCell.textContent = 'กำลังเตรียมใบประกาศ';
+                    certificate1Cell.textContent = 'ยังส่ง PLC ไม่ครบ';
+                } else if (!certificate1Link) {
+                    certificate1Cell.textContent = 'กำลังจัดทำใบประกาศ';
                 } else {
                     const link = document.createElement('a');
-                    link.href = certificateLink;
+                    link.href = certificate1Link;
                     link.target = '_blank';
                     link.rel = 'noopener';
-                    link.className = 'text-decoration-none';
-                    link.textContent = 'ดาวน์โหลดใบประกาศได้';
-                    statusCell.appendChild(link);
+                    link.className = 'btn btn-sm btn-outline-primary';
+                    link.textContent = 'ดาวน์โหลดใบประกาศ';
+                    certificate1Cell.appendChild(link);
                 }
+                const showcaseCell = document.createElement('td');
+                showcaseCell.setAttribute('data-label', 'Showcase');
+                showcaseCell.setAttribute('data-col', 'showcase');
+                if (showcaseValue === '1') {
+                    showcaseCell.innerHTML = '<span class="fw-semibold text-success">ยินดีด้วย! ได้รับเลือกนำเสนอ 11 มีนาคม 2569</span>';
+                } else {
+                    showcaseCell.textContent = '';
+                }
+                const certificate2Cell = document.createElement('td');
+                certificate2Cell.setAttribute('data-label', 'Certificate2');
+                certificate2Cell.setAttribute('data-col', 'certificate2');
+                if (certificate2Link) {
+                    const link = document.createElement('a');
+                    link.href = certificate2Link;
+                    link.target = '_blank';
+                    link.rel = 'noopener';
+                    link.className = 'btn btn-sm btn-outline-primary';
+                    link.textContent = 'ดาวน์โหลดใบประกาศ';
+                    certificate2Cell.appendChild(link);
+                } else {
+                    certificate2Cell.textContent = '';
+                }
+                certificate1Cell.classList.toggle('d-none', !showCertificate1);
+                showcaseCell.classList.toggle('d-none', !showShowcase);
+                certificate2Cell.classList.toggle('d-none', !showCertificate2);
                 row.appendChild(indexCell);
                 row.appendChild(nameCell);
                 plcCells.forEach((cell) => row.appendChild(cell));
-                row.appendChild(statusCell);
+                row.appendChild(certificate1Cell);
+                row.appendChild(showcaseCell);
+                row.appendChild(certificate2Cell);
                 tableBody.appendChild(row);
             });
 
@@ -198,6 +261,20 @@
             renderRows(sorted);
         }
 
+        function normalizeUrl(rawUrl) {
+            if (!rawUrl) {
+                return '';
+            }
+            const trimmed = String(rawUrl).trim();
+            if (!trimmed) {
+                return '';
+            }
+            if (/^https?:\/\//i.test(trimmed)) {
+                return trimmed;
+            }
+            return `https://${trimmed.replace(/^\/+/, '')}`;
+        }
+
         async function loadData() {
             renderSkeleton();
             setStatus('กำลังดึงข้อมูล...');
@@ -205,6 +282,7 @@
                 const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
                 if (cached && Date.now() - cached.timestamp < cacheTtlMs && Array.isArray(cached.data)) {
                     allRows = cached.data;
+                    computeColumnVisibility(allRows);
                     applyFilter();
                     setStatus('แสดงผลจากข้อมูลที่โหลดไว้');
                 }
@@ -219,6 +297,7 @@
                     throw new Error('รูปแบบข้อมูลไม่ถูกต้อง');
                 }
                 allRows = data;
+                computeColumnVisibility(allRows);
                 sessionStorage.setItem(cacheKey, JSON.stringify({
                     timestamp: Date.now(),
                     data
@@ -229,7 +308,7 @@
                 tableBody.innerHTML = '';
                 const errorRow = document.createElement('tr');
                 const errorCell = document.createElement('td');
-                errorCell.colSpan = 5;
+                errorCell.colSpan = getVisibleColumnCount();
                 errorCell.className = 'text-center text-danger py-4';
                 errorCell.textContent = 'ไม่สามารถโหลดข้อมูลได้ โปรดลองใหม่ภายหลัง';
                 errorRow.appendChild(errorCell);
