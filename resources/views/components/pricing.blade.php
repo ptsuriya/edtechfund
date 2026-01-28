@@ -17,7 +17,7 @@
                             <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
                                 <a href="{{ route('register_name') }}" class="btn btn-lg px-5 text-white"
                                     style="background: linear-gradient(135deg, #ff4d4d, #ff9f1a); box-shadow: 0 10px 24px rgba(255, 77, 77, 0.35);">
-                                    ตรวจสอบรายชื่อ
+                                    ตรวจสอบงานผู้เข้าร่วมโครงการ
                                 </a>
                             </div>
                         </div>

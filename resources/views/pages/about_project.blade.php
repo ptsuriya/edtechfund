@@ -380,7 +380,7 @@
             </div>
             <div class="d-grid gap-2">
               <a href="{{ route('register_name') }}" class="btn btn-primary">
-                <i class="bi bi-list-check me-2"></i>ตรวจสอบรายชื่อผู้สมัคร
+                <i class="bi bi-list-check me-2"></i>ตรวจสอบงานผู้เข้าร่วมโครงการ
               </a>
               <a href="{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}" class="btn btn-outline-primary" target="_blank">
                 <i class="bi bi-file-earmark-text me-2"></i>ดาวน์โหลดกำหนดการล่าสุด

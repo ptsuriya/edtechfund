@@ -45,13 +45,15 @@
                 </li> --}}
                 <li><a href="{{ route('about_reserchers') }}">เกี่ยวกับผู้วิจัย</a></li>
                 <li><a href="{{ route('about_participants') }}">สรุปรายชื่อผู้เข้าร่วมวิจัย</a></li>
+                <li><a href="{{ route('register_name') }}">ตรวจสอบงานผู้เข้าร่วมโครงการ</a></li>
                 <li><a href="{{ route('about_document') }}">เอกสารที่เกี่ยวข้อง</a></li>
+                <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZjI1MjIxNzUtNDlmZi00NWQ1LWFjNjktNjMxZTIyNGJmMjA1IiwidCI6IjNjZDM3MzZmLTFiODItNGM4My1hNDFkLWViYWY2YjEwNGMxNiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">รายงานสรุปผลโครงการ</a></li>
               </ul>
             </li>
             <li><a href="{{ route('register') }}">รับสมัครเข้าโครงการ</a></li>
             <li><a href="#footer">ติดต่อเรา</a></li>
             <li><a href="{{ route('faq') }}">คำถามที่พบบ่อย</a></li>
-            <li><a href="{{ route('about_helpbook') }}">คู่มือการใช้งาน</a></li>
+            <li><a href="{{ route('about_helpbook') }}">เอกสารประกอบโครงการ</a></li>
             <li><a href="https://edtechfund.rbru.ac.th/" target="_blank" rel="noopener">เข้าสู่ระบบ</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

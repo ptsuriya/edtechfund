@@ -26,7 +26,7 @@
                   </ul>
                   <h4>ลิงก์โซเชียลมีเดีย</h4>
                   <div class="social-links d-flex">
-                      <a href="https://line.me/ti/g2/H8OCZhaFs4H1EQ_wnUhn8Bc9KFlOJSTYVRd6qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><i
+                      <a href="https://line.me/ti/g2/6QHHF-4rDswq6Hgz4j6_GKlghWOFDFg8rQ_Trw?utm_source=invitation&utm_medium=QR_code&utm_campaign=default"><i
                               class="bi bi-line"></i></a>
                       {{-- <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -50,7 +50,7 @@
                   <h4>ติดต่อสอบถาม</h4>
                   <p>สามารถติดตามข่าวสาร และ ติดต่อสอบถามได้ที่ไลน์ OpenChat</p>
                   <div class="d-flex justify-content-center align-content-center">
-                    <a href="https://line.me/ti/g2/H8OCZhaFs4H1EQ_wnUhn8Bc9KFlOJSTYVRd6qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <a href="https://line.me/ti/g2/6QHHF-4rDswq6Hgz4j6_GKlghWOFDFg8rQ_Trw?utm_source=invitation&utm_medium=QR_code&utm_campaign=default">
                         <img src="{{ asset('img/line.jpg') }}"
                           alt="QR Code Line OpenChat" style="width: auto; height: 125px; "></a>
                   </div>

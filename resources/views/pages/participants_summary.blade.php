@@ -31,11 +31,13 @@
             <div class="table-responsive">
                 <table class="table table-bordered align-middle participants-table">
                     <colgroup>
+                        <col style="width: 80px;">
                         <col style="width: 45%;">
                         <col style="width: 55%;">
                     </colgroup>
                     <thead class="table-light">
                         <tr>
+                            <th class="row-index">ลำดับ</th>
                             <th class="sortable-head" data-sort-key="name" role="button" tabindex="0">
                                 ชื่อ <i class="bi bi-arrow-down-up ms-1"></i>
                             </th>
@@ -80,7 +82,7 @@
     }
 
     .participants-table {
-        min-width: 640px;
+        min-width: 720px;
         table-layout: auto;
     }
 </style>
@@ -110,6 +112,7 @@
             for (let i = 0; i < 6; i += 1) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td><span class="placeholder col-3"></span></td>
                     <td><span class="placeholder col-8"></span></td>
                     <td><span class="placeholder col-10"></span></td>
                 `;
@@ -124,7 +127,7 @@
             if (!list.length) {
                 const emptyRow = document.createElement('tr');
                 const emptyCell = document.createElement('td');
-                emptyCell.colSpan = 2;
+                emptyCell.colSpan = 3;
                 emptyCell.className = 'text-center text-muted py-4';
                 emptyCell.textContent = 'ไม่พบข้อมูล';
                 emptyRow.appendChild(emptyCell);
@@ -134,14 +137,19 @@
                 return;
             }
 
-            list.forEach((row) => {
+            list.forEach((row, index) => {
                 const tr = document.createElement('tr');
+                const indexCell = document.createElement('td');
+                indexCell.textContent = index + 1;
+                indexCell.className = 'row-index text-nowrap';
+                indexCell.setAttribute('data-label', 'ลำดับ');
                 const nameCell = document.createElement('td');
                 nameCell.textContent = row.name || '-';
                 nameCell.setAttribute('data-label', 'ชื่อ');
                 const schoolCell = document.createElement('td');
                 schoolCell.textContent = row.school || '-';
                 schoolCell.setAttribute('data-label', 'โรงเรียน');
+                tr.appendChild(indexCell);
                 tr.appendChild(nameCell);
                 tr.appendChild(schoolCell);
                 tableBody.appendChild(tr);
@@ -232,7 +240,7 @@
                 tableBody.innerHTML = '';
                 const errorRow = document.createElement('tr');
                 const errorCell = document.createElement('td');
-                errorCell.colSpan = 2;
+                errorCell.colSpan = 3;
                 errorCell.className = 'text-center text-danger py-4';
                 errorCell.textContent = 'ไม่สามารถโหลดข้อมูลได้ โปรดลองใหม่ภายหลัง';
                 errorRow.appendChild(errorCell);
