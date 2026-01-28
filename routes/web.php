@@ -41,6 +41,10 @@ Route::get('/register', function () {
     return view('pages.register');
 })->name('register');
 
+Route::get('/ActivityPicrture', function () {
+    return view('pages.activity_picture');
+})->name('activity_picture');
+
 Route::get('/register-name', function () {
     return view('pages.register_name');
 })->name('register_name');
