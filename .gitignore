@@ -17,3 +17,26 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Local heavy assets
+/public/activity/*
+!/public/activity/note.txt
+
+# Large binary files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+*.iso
+*.psd
+*.ai
+*.sketch
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wmv
+*.webm

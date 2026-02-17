@@ -1,3 +1,4 @@
+{{--
 <div class="mb-4" data-aos="fade-up">
     <div class="d-flex align-items-start">
         <div class="me-3 fw-bold text-primary">08:00-08:30</div>
@@ -66,6 +67,34 @@
             <h5 class="mb-1">การใช้ Generative AI เพื่อลดภาระงานที่ไม่ใช่งานสอน</h5>
             <p class="mb-1 text-muted">สร้างเอกสารภาระงาน บันทึกข้อความ และงานธุรการด้วย AI</p>
             <p class="mb-0"><small class="text-muted">วิทยากร: คุณปัญจพัฒน์ เกรียงวีระยุทธ</small></p>
+        </div>
+    </div>
+</div>
+--}}
+
+<div class="mb-4" data-aos="fade-up">
+    <div class="d-flex align-items-start">
+        <div class="me-3 fw-bold text-primary">15 กุมภาพันธ์ 2569</div>
+        <div>
+            <h5 class="mb-1">ชุมชนการเรียนรู้ทางวิชาชีพ (Professional Learning Community) PLC ครั้งที่ 1</h5>
+        </div>
+    </div>
+</div>
+
+<div class="mb-4" data-aos="fade-up" data-aos-delay="80">
+    <div class="d-flex align-items-start">
+        <div class="me-3 fw-bold text-primary">28 กุมภาพันธ์ 2569</div>
+        <div>
+            <h5 class="mb-1">ชุมชนการเรียนรู้ทางวิชาชีพ (Professional Learning Community) PLC ครั้งที่ 2</h5>
+        </div>
+    </div>
+</div>
+
+<div data-aos="fade-up" data-aos-delay="160">
+    <div class="d-flex align-items-start">
+        <div class="me-3 fw-bold text-primary">11 มีนาคม 2569</div>
+        <div>
+            <h5 class="mb-1">นำเสนอผลสัมฤทธิ์ (Showcase)</h5>
         </div>
     </div>
 </div>
