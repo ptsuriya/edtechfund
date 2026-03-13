@@ -9,53 +9,115 @@
     <section class="py-4 py-md-5 register-name-page">
         <div class="card shadow-sm mx-3 mx-md-4" data-aos="fade-up">
             <div class="card-body p-3 p-md-4">
-
-                {{-- Header --}}
-                <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 mb-4">
-                    <div>
-                        <h1 class="h4 fw-bold text-primary mb-1">ตรวจสอบผลการอบรม</h1>
-                        <p class="text-muted mb-0 small">ข้อมูลอัปเดตจากระบบลงทะเบียน</p>
-                    </div>
-                    <div class="w-100 w-sm-auto" style="max-width:300px;">
-                        <label for="register-search" class="form-label mb-1">ค้นหาชื่อหรืออีเมล</label>
-                        <input id="register-search" type="text" class="form-control"
-                            placeholder="ค้นหาจากชื่อหรืออีเมล">
-                    </div>
+                <div class="mb-4">
+                    <h1 class="h4 fw-bold text-primary mb-1">Showcase และตรวจสอบผลการอบรม</h1>
+                    <p class="text-muted mb-0 small">ข้อมูลอัปเดตจากระบบลงทะเบียน</p>
                 </div>
 
-                {{-- scroll hint on mobile --}}
-                <p class="text-muted small d-md-none mb-2">
-                    <i class="bi bi-arrow-left-right me-1"></i>เลื่อนซ้าย-ขวาเพื่อดูข้อมูลเพิ่มเติม
-                </p>
+                <ul class="nav nav-tabs register-tabs mb-4" id="register-name-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="showcase-tab" data-bs-toggle="tab"
+                            data-bs-target="#showcase-pane" type="button" role="tab" aria-controls="showcase-pane"
+                            aria-selected="true">
+                            Showcase
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="register-result-tab" data-bs-toggle="tab"
+                            data-bs-target="#register-result-pane" type="button" role="tab"
+                            aria-controls="register-result-pane" aria-selected="false">
+                            ตรวจสอบผลการอบรม
+                        </button>
+                    </li>
+                </ul>
 
-                {{-- Table --}}
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover align-middle mb-0">
-                        <thead class="table-primary">
-                            <tr>
-                                <th class="text-center index-col">ลำดับ</th>
-                                <th class="name-col">ชื่อ</th>
-                                <th class="mail-col">อีเมล</th>
-                                <th class="text-center work-col">แบบทดสอบ<br>วัดความรู้<br>ก่อนอบรม</th>
-                                <th class="text-center work-col">แบบทดสอบ<br>วัดความรู้<br>หลังอบรม</th>
-                                <th class="text-center work-col">แบบประเมิน<br>การยอมรับระบบ</th>
-                                <th class="text-center work-col">แบบประเมิน<br>ความพึงพอใจ</th>
-                                <th class="text-center work-col">แบบสอบถาม<br>ทักษะครู</th>
-                                <th class="text-center plc-col">PLC1</th>
-                                <th class="text-center plc-col">PLC2</th>
-                                <th class="text-center cert-col">Certificate</th>
-                            </tr>
-                        </thead>
-                        <tbody id="main-table-body">
-                            {{-- filled by JS --}}
-                        </tbody>
-                    </table>
-                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="showcase-pane" role="tabpanel"
+                        aria-labelledby="showcase-tab" tabindex="0">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 mb-3">
+                            <div>
+                                <h2 class="h5 fw-semibold mb-1">Showcase</h2>
+                                <p class="text-muted mb-0 small">แสดงผลงานพร้อมลิงก์ดาวน์โหลดใบประกาศ</p>
+                            </div>
+                            <div class="w-100 w-sm-auto" style="max-width:300px;">
+                                <label for="showcase-search" class="form-label mb-1">ค้นหาชื่อหรือโรงเรียน</label>
+                                <input id="showcase-search" type="text" class="form-control"
+                                    placeholder="ค้นหาจากชื่อหรือโรงเรียน">
+                            </div>
+                        </div>
 
-                {{-- Footer --}}
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                    <small id="register-count" class="text-muted"></small>
-                    <small id="register-status" class="text-muted fst-italic"></small>
+                        <p class="text-muted small d-md-none mb-2">
+                            <i class="bi bi-arrow-left-right me-1"></i>เลื่อนซ้าย-ขวาเพื่อดูข้อมูลเพิ่มเติม
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover align-middle mb-0">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th class="text-center index-col">ลำดับ</th>
+                                        <th class="name-col">ชื่อ</th>
+                                        <th class="school-col">โรงเรียน</th>
+                                        <th class="text-center cert-col">URL</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="showcase-table-body">
+                                    {{-- filled by JS --}}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small id="showcase-count" class="text-muted"></small>
+                            <small id="showcase-status" class="text-muted fst-italic"></small>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="register-result-pane" role="tabpanel"
+                        aria-labelledby="register-result-tab" tabindex="0">
+                        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 mb-3">
+                            <div>
+                                <h2 class="h5 fw-semibold mb-1">ตรวจสอบผลการอบรม</h2>
+                                <p class="text-muted mb-0 small">ตรวจสอบสถานะงาน ความคืบหน้า และเกียรติบัตร</p>
+                            </div>
+                            <div class="w-100 w-sm-auto" style="max-width:300px;">
+                                <label for="register-search" class="form-label mb-1">ค้นหาชื่อหรืออีเมล</label>
+                                <input id="register-search" type="text" class="form-control"
+                                    placeholder="ค้นหาจากชื่อหรืออีเมล">
+                            </div>
+                        </div>
+
+                        <p class="text-muted small d-md-none mb-2">
+                            <i class="bi bi-arrow-left-right me-1"></i>เลื่อนซ้าย-ขวาเพื่อดูข้อมูลเพิ่มเติม
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover align-middle mb-0">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th class="text-center index-col">ลำดับ</th>
+                                        <th class="name-col">ชื่อ</th>
+                                        <th class="mail-col">อีเมล</th>
+                                        <th class="text-center work-col">แบบทดสอบ<br>วัดความรู้<br>ก่อนอบรม</th>
+                                        <th class="text-center work-col">แบบทดสอบ<br>วัดความรู้<br>หลังอบรม</th>
+                                        <th class="text-center work-col">แบบประเมิน<br>การยอมรับระบบ</th>
+                                        <th class="text-center work-col">แบบประเมิน<br>ความพึงพอใจ</th>
+                                        <th class="text-center work-col">แบบสอบถาม<br>ทักษะครู</th>
+                                        <th class="text-center plc-col">PLC1</th>
+                                        <th class="text-center plc-col">PLC2</th>
+                                        <th class="text-center cert-col">Certificate</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="main-table-body">
+                                    {{-- filled by JS --}}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small id="register-count" class="text-muted"></small>
+                            <small id="register-status" class="text-muted fst-italic"></small>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -125,6 +187,12 @@
         font-size: 0.82rem;
     }
 
+    .school-col {
+        min-width: 220px;
+        max-width: 320px;
+        white-space: normal;
+    }
+
     .work-col {
         width: 110px;
         min-width: 100px;
@@ -164,29 +232,45 @@
         color: #6c757d;
         font-size: 0.82rem;
     }
+
+    .register-tabs .nav-link {
+        font-weight: 600;
+    }
 </style>
 @endpush
 
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbwjvpSTxxBE3gBp2yAQhAGvkbSJ2O3gokaX0SQ6NWhv_LXvfon6CiKIoY4YWvDGCAq-9g/exec?action=read&path=';
+    const CACHE_TTL = 5 * 60 * 1000;
 
-    const API_URL   = 'https://script.google.com/macros/s/AKfycbwjvpSTxxBE3gBp2yAQhAGvkbSJ2O3gokaX0SQ6NWhv_LXvfon6CiKIoY4YWvDGCAq-9g/exec?action=read&path=API';
-    const CACHE_KEY = 'registerNameCache_v4';
-    const CACHE_TTL = 5 * 60 * 1000; // 5 นาที
-    const TOTAL_COLS = 11;
+    const showcaseState = {
+        apiUrl: API_BASE_URL + 'Showcase',
+        cacheKey: 'registerNameShowcaseCache_v1',
+        totalCols: 4,
+        tableBody: document.getElementById('showcase-table-body'),
+        searchInput: document.getElementById('showcase-search'),
+        countEl: document.getElementById('showcase-count'),
+        statusEl: document.getElementById('showcase-status'),
+        allRows: []
+    };
 
-    const tableBody   = document.getElementById('main-table-body');
-    const searchInput = document.getElementById('register-search');
-    const countEl     = document.getElementById('register-count');
-    const statusEl    = document.getElementById('register-status');
-
-    let allRows = [];
+    const registerState = {
+        apiUrl: API_BASE_URL + 'API',
+        cacheKey: 'registerNameCache_v5',
+        totalCols: 11,
+        tableBody: document.getElementById('main-table-body'),
+        searchInput: document.getElementById('register-search'),
+        countEl: document.getElementById('register-count'),
+        statusEl: document.getElementById('register-status'),
+        allRows: []
+    };
 
     /* ─── helpers ─── */
 
-    function setStatus(msg) {
-        statusEl.textContent = msg;
+    function setStatus(state, msg) {
+        state.statusEl.textContent = msg;
     }
 
     function getNameValue(item) {
@@ -216,6 +300,12 @@ document.addEventListener('DOMContentLoaded', function () {
         return '';
     }
 
+    function getSchoolValue(item) {
+        return String(
+            item?.School ?? item?.school ?? item?.SchoolName ?? item?.school_name ?? ''
+        ).trim();
+    }
+
     function normalizeUrl(raw) {
         if (!raw) return '';
         const t = String(raw).trim();
@@ -232,31 +322,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ─── skeleton ─── */
 
-    function renderSkeleton() {
-        tableBody.innerHTML = '';
+    function renderSkeleton(state) {
+        state.tableBody.innerHTML = '';
         for (let i = 0; i < 8; i++) {
             const tr = document.createElement('tr');
-            tr.innerHTML = Array(TOTAL_COLS)
+            tr.innerHTML = Array(state.totalCols)
                 .fill('<td><span class="placeholder col-8 rounded"></span></td>')
                 .join('');
-            tableBody.appendChild(tr);
+            state.tableBody.appendChild(tr);
         }
-        countEl.textContent = '';
+        state.countEl.textContent = '';
     }
 
     /* ─── render rows ─── */
 
-    function renderRows(rows) {
-        tableBody.innerHTML = '';
+    function renderShowcaseRows(state, rows) {
+        state.tableBody.innerHTML = '';
 
         if (!rows.length) {
             const tr = document.createElement('tr');
             const td = document.createElement('td');
-            td.colSpan  = TOTAL_COLS;
+            td.colSpan  = state.totalCols;
             td.className = 'text-center text-muted py-4';
             td.textContent = 'ไม่พบข้อมูลที่ค้นหา';
             tr.appendChild(td);
-            tableBody.appendChild(tr);
+            state.tableBody.appendChild(tr);
+            return;
+        }
+
+        rows.forEach(function (item, idx) {
+            const certUrl = normalizeUrl(item?.URL ?? item?.url ?? '');
+            const tr = document.createElement('tr');
+
+            const tdIdx = document.createElement('td');
+            tdIdx.className = 'text-center';
+            tdIdx.textContent = getField(item, 'No') || idx + 1;
+            tr.appendChild(tdIdx);
+
+            const tdName = document.createElement('td');
+            tdName.textContent = getNameValue(item) || '-';
+            tr.appendChild(tdName);
+
+            const tdSchool = document.createElement('td');
+            tdSchool.className = 'school-col';
+            tdSchool.textContent = getSchoolValue(item) || '-';
+            tr.appendChild(tdSchool);
+
+            const tdCert = document.createElement('td');
+            tdCert.className = 'text-center';
+
+            if (!certUrl) {
+                tdCert.innerHTML = '<span class="preparing-cert">ยังไม่มีลิงก์ใบประกาศ</span>';
+            } else {
+                const btn = document.createElement('a');
+                btn.href = certUrl;
+                btn.target = '_blank';
+                btn.rel = 'noopener noreferrer';
+                btn.className = 'btn btn-sm btn-success';
+                btn.innerHTML = '<i class="bi bi-download me-1"></i>ดาวน์โหลดใบประกาศ';
+                tdCert.appendChild(btn);
+            }
+
+            tr.appendChild(tdCert);
+            state.tableBody.appendChild(tr);
+        });
+    }
+
+    function renderRegisterRows(state, rows) {
+        state.tableBody.innerHTML = '';
+
+        if (!rows.length) {
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+            td.colSpan  = state.totalCols;
+            td.className = 'text-center text-muted py-4';
+            td.textContent = 'ไม่พบข้อมูลที่ค้นหา';
+            tr.appendChild(td);
+            state.tableBody.appendChild(tr);
             return;
         }
 
@@ -314,13 +456,10 @@ document.addEventListener('DOMContentLoaded', function () {
             tdCert.className = 'text-center';
 
             if (!eligible) {
-                // ไม่เข้าเงื่อนไขทั้งสองกรณี
                 tdCert.innerHTML = '<span class="not-eligible">คุณไม่มีสิทธิ์<br>ได้รับเกียรติบัตร</span>';
             } else if (!cert1Url) {
-                // เข้าเงื่อนไขแต่ยังไม่มี URL ใบประกาศ
                 tdCert.innerHTML = '<span class="preparing-cert">กำลังจัดทำใบประกาศ</span>';
             } else {
-                // เข้าเงื่อนไข + มี URL → ปุ่มดาวน์โหลด
                 const btn = document.createElement('a');
                 btn.href      = cert1Url;
                 btn.target    = '_blank';
@@ -331,15 +470,31 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             tr.appendChild(tdCert);
-            tableBody.appendChild(tr);
+            state.tableBody.appendChild(tr);
         });
     }
 
     /* ─── filter ─── */
 
-    function applyFilter() {
-        const kw = searchInput.value.trim().toLowerCase();
-        const filtered = allRows
+    function applyShowcaseFilter() {
+        const kw = showcaseState.searchInput.value.trim().toLowerCase();
+        const filtered = showcaseState.allRows
+            .filter(item => getNameValue(item) !== '')
+            .filter(item => {
+                if (!kw) return true;
+                return getNameValue(item).toLowerCase().includes(kw)
+                    || getSchoolValue(item).toLowerCase().includes(kw);
+            });
+
+        renderShowcaseRows(showcaseState, filtered);
+        showcaseState.countEl.textContent = filtered.length
+            ? `แสดงทั้งหมด ${filtered.length} รายการ`
+            : '';
+    }
+
+    function applyRegisterFilter() {
+        const kw = registerState.searchInput.value.trim().toLowerCase();
+        const filtered = registerState.allRows
             .filter(item => getNameValue(item) !== '')
             .filter(item => {
                 if (!kw) return true;
@@ -347,29 +502,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     || getMailValue(item).toLowerCase().includes(kw);
             });
 
-        renderRows(filtered);
-        countEl.textContent = filtered.length
+        renderRegisterRows(registerState, filtered);
+        registerState.countEl.textContent = filtered.length
             ? `แสดงทั้งหมด ${filtered.length} รายการ`
             : '';
     }
 
     /* ─── load data ─── */
 
-    async function loadData() {
-        renderSkeleton();
-        setStatus('กำลังดึงข้อมูล…');
+    async function loadData(state, onFilter) {
+        renderSkeleton(state);
+        setStatus(state, 'กำลังดึงข้อมูล…');
 
         try {
-            // แสดงจาก cache ก่อน (ถ้ายังไม่หมดอายุ)
-            const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
+            const cached = JSON.parse(sessionStorage.getItem(state.cacheKey) || 'null');
             if (cached && Date.now() - cached.timestamp < CACHE_TTL && Array.isArray(cached.data)) {
-                allRows = cached.data;
-                applyFilter();
-                setStatus('แสดงผลจากข้อมูลที่โหลดไว้');
+                state.allRows = cached.data;
+                onFilter();
+                setStatus(state, 'แสดงผลจากข้อมูลที่โหลดไว้');
             }
 
-            // ดึงข้อมูลใหม่จาก API เสมอ
-            const res = await fetch(API_URL, { cache: 'no-store' });
+            const res = await fetch(state.apiUrl, { cache: 'no-store' });
             if (!res.ok) throw new Error('HTTP ' + res.status);
 
             const payload = await res.json();
@@ -378,27 +531,30 @@ document.addEventListener('DOMContentLoaded', function () {
                        : null;
             if (!data) throw new Error('รูปแบบข้อมูลไม่ถูกต้อง');
 
-            allRows = data;
-            sessionStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), data }));
-            applyFilter();
-            setStatus('อัปเดตล่าสุดเรียบร้อย');
+            state.allRows = data;
+            sessionStorage.setItem(state.cacheKey, JSON.stringify({ timestamp: Date.now(), data }));
+            onFilter();
+            setStatus(state, 'อัปเดตล่าสุดเรียบร้อย');
 
         } catch (err) {
-            tableBody.innerHTML = '';
+            state.tableBody.innerHTML = '';
             const tr = document.createElement('tr');
             const td = document.createElement('td');
-            td.colSpan   = TOTAL_COLS;
+            td.colSpan   = state.totalCols;
             td.className = 'text-center text-danger py-4';
             td.textContent = 'ไม่สามารถโหลดข้อมูลได้ โปรดลองใหม่ภายหลัง';
             tr.appendChild(td);
-            tableBody.appendChild(tr);
-            countEl.textContent = '';
-            setStatus('');
+            state.tableBody.appendChild(tr);
+            state.countEl.textContent = '';
+            setStatus(state, '');
         }
     }
 
-    searchInput.addEventListener('input', applyFilter);
-    loadData();
+    showcaseState.searchInput.addEventListener('input', applyShowcaseFilter);
+    registerState.searchInput.addEventListener('input', applyRegisterFilter);
+
+    loadData(showcaseState, applyShowcaseFilter);
+    loadData(registerState, applyRegisterFilter);
 });
 </script>
 @endpush

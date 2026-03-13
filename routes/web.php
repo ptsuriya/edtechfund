@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 */
 
 $fetchActivityImages = function (int $limit = 12): array {
-    $directory = public_path('activity');
+    $directory = public_path('img/Carousel');
     if (!File::exists($directory)) {
         return [];
     }
@@ -53,7 +53,7 @@ $fetchActivityImages = function (int $limit = 12): array {
         })
         ->take($limit)
         ->map(function ($file) {
-            return asset('activity/' . $file->getFilename());
+            return asset('img/Carousel/' . $file->getFilename());
         })
         ->values()
         ->all();

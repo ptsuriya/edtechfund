@@ -32,6 +32,9 @@
                     box-shadow: 0 16px 28px rgba(245, 158, 11, 0.45);
                     filter: brightness(1.02);
                 }
+                .drive-section {
+                    margin-bottom: 28px;
+                }
             </style>
 
             <div class="section-title mb-4" data-aos="fade-up">
@@ -39,26 +42,52 @@
                 <p>รวมภาพกิจกรรมของโครงการ</p>
             </div>
 
-            <div style="display:flex; justify-content:center; margin:12px 0 20px;">
-                <a
-                    href="https://drive.google.com/drive/folders/16_ryjK93CWdpv5olC0KECnckoX3xt-2S?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="drive-cta"
-                >
-                    เปิดใน Google Drive
-                </a>
+            <div class="drive-section">
+                <div style="display:flex; justify-content:center; margin:12px 0 20px;">
+                    <a
+                        href="https://drive.google.com/drive/folders/1S6Wg3L8m7bhQ_fgL20gjuzhTAwV1Xyr9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="drive-cta"
+                    >
+                        เปิดรูปกิจกรรมชุดใหม่
+                    </a>
+                </div>
+
+                <p style="margin:0 0 6px; color:#111827; font-weight:700; font-size:16px;">ภาพตัวอย่างชุดใหม่</p>
+                <p style="margin:0 0 10px; color:#6b7280; font-size:14px;">หากต้องการดูรูปทั้งหมดหรือดาวน์โหลด แนะนำให้เปิดใน Google Drive</p>
+                <div style="position:relative; border:1px solid #e5e7eb; border-radius:12px; overflow:hidden;">
+                    <iframe
+                        src="https://drive.google.com/embeddedfolderview?id=1S6Wg3L8m7bhQ_fgL20gjuzhTAwV1Xyr9#grid"
+                        style="width:100%; height:560px; border:0;"
+                        loading="lazy"
+                        title="Google Drive Preview New"
+                    ></iframe>
+                </div>
             </div>
 
-            <p style="margin:0 0 6px; color:#111827; font-weight:700; font-size:16px;">ภาพตัวอย่าง </p>
-            <p style="margin:0 0 10px; color:#6b7280; font-size:14px;">หากต้องการดูรูปทั้งหมดหรือดาวน์โหลด แนะนำให้เปิดใน Google Drive</p>
-            <div style="position:relative; border:1px solid #e5e7eb; border-radius:12px; overflow:hidden;">
-                <iframe
-                    src="https://drive.google.com/embeddedfolderview?id=16_ryjK93CWdpv5olC0KECnckoX3xt-2S#grid"
-                    style="width:100%; height:560px; border:0;"
-                    loading="lazy"
-                    title="Google Drive Preview"
-                ></iframe>
+            <div class="drive-section">
+                <div style="display:flex; justify-content:center; margin:12px 0 20px;">
+                    <a
+                        href="https://drive.google.com/drive/folders/16_ryjK93CWdpv5olC0KECnckoX3xt-2S?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="drive-cta"
+                    >
+                        เปิดรูปกิจกรรมชุดเก่า
+                    </a>
+                </div>
+
+                <p style="margin:0 0 6px; color:#111827; font-weight:700; font-size:16px;">ภาพตัวอย่างชุดเก่า</p>
+                <p style="margin:0 0 10px; color:#6b7280; font-size:14px;">เก็บลิงก์เดิมไว้สำหรับดูภาพกิจกรรมย้อนหลัง</p>
+                <div style="position:relative; border:1px solid #e5e7eb; border-radius:12px; overflow:hidden;">
+                    <iframe
+                        src="https://drive.google.com/embeddedfolderview?id=16_ryjK93CWdpv5olC0KECnckoX3xt-2S#grid"
+                        style="width:100%; height:560px; border:0;"
+                        loading="lazy"
+                        title="Google Drive Preview Old"
+                    ></iframe>
+                </div>
             </div>
         </div>
     </section>
