@@ -14,28 +14,6 @@
                 "position": 1,
                 "item": {
                     "@type": "CreativeWork",
-                    "name": "รายงานความก้าวหน้าและการเบิกจ่ายงวดที่ 1",
-                    "url": "{{ asset('files/อว0631.09-0796-ส่งงวด-1.pdf') }}",
-                    "fileFormat": "application/pdf",
-                    "inLanguage": "th-TH"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                    "@type": "CreativeWork",
-                    "name": "รายละเอียดกิจกรรม แผนการใช้จ่าย และงบประมาณ",
-                    "url": "{{ asset('files/แผนปฏิบัติการและแผนการใช้จ่ายเงินโครงการ.pdf') }}",
-                    "fileFormat": "application/pdf",
-                    "inLanguage": "th-TH"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                    "@type": "CreativeWork",
                     "name": "กำหนดการโครงการ",
                     "url": "{{ asset('กำหนดการ Ver.2_4 Modules.docx') }}",
                     "fileFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -106,28 +84,6 @@
                     </tr>
                     <tr>
                         <td>4.</td>
-
-                        <td>รายงานความก้าวหน้าและการเบิกจ่ายงวดที่ 1</td>
-                        <td class="text-center">
-                            <a href="{{ asset('files/อว0631.09-0796-ส่งงวด-1.pdf') }}" class="btn btn-sm btn-primary"
-                                target="_blank">
-                                <i class="bi bi-file-earmark-pdf"></i> ดาวน์โหลด
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5.</td>
-
-                        <td>รายละเอียดกิจกรรม แผนการใช้จ่าย และงบประมาณ</td>
-                        <td class="text-center">
-                            <a href="{{ asset('files/แผนปฏิบัติการและแผนการใช้จ่ายเงินโครงการ.pdf') }}"
-                                class="btn btn-sm btn-primary" target="_blank">
-                                <i class="bi bi-file-earmark-pdf"></i> ดาวน์โหลด
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6.</td>
 
                         <td>กำหนดการโครงการ</td>
                         <td class="text-center">
