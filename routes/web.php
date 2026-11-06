@@ -233,6 +233,10 @@ Route::get('/ActivityPicrture', function () {
     return view('pages.activity_picture');
 })->name('activity_picture');
 
+Route::get('/research-2568', function () {
+    return view('pages.research_2568');
+})->name('research_2568');
+
 Route::get('/register-name', function () {
     return view('pages.register_name');
 })->name('register_name');

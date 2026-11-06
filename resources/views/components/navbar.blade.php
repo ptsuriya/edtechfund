@@ -47,6 +47,7 @@
                 <li><a href="{{ route('register') }}">รับสมัครเข้าโครงการ</a></li>
                 <li><a href="{{ route('about_participants') }}">สรุปรายชื่อผู้เข้าร่วมวิจัย</a></li>
                 <li><a href="{{ route('register_name') }}">ตรวจสอบงานผู้เข้าร่วมโครงการ</a></li>
+                <li><a href="{{ route('research_2568') }}">ผลงานวิจัยกองทุน ปี 2568</a></li>
                 <li><a href="{{ route('about_document') }}">เอกสารที่เกี่ยวข้อง</a></li>
                 <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZjI1MjIxNzUtNDlmZi00NWQ1LWFjNjktNjMxZTIyNGJmMjA1IiwidCI6IjNjZDM3MzZmLTFiODItNGM4My1hNDFkLWViYWY2YjEwNGMxNiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener">รายงานสรุปผลโครงการ</a></li>
               </ul>
